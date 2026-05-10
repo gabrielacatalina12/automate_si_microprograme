@@ -1,0 +1,374 @@
+﻿
+@model IEnumerable<irigation_system.Models.SensorData>
+
+@{
+    ViewData["Title"] = "Fairy Bloom Dashboard";
+}
+
+<style>
+
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Segoe UI', sans-serif;
+        background: linear-gradient(rgba(255,245,250,0.72), rgba(240,255,240,0.72)), url('https://images.unsplash.com/photo-1525310072745-f49212b5ac6d?q=80&w=2070&auto=format&fit=crop');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        overflow-x: hidden;
+        color: #6b4b6f;
+    }
+
+    /* MAGIC FLOATING FLOWERS */
+
+    .flowers {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        z-index: -1;
+        pointer-events: none;
+    }
+
+        .flowers span {
+            position: absolute;
+            display: block;
+            font-size: 38px;
+            opacity: 0.85;
+            animation: fairyFloat linear infinite;
+            filter: drop-shadow(0 0 10px rgba(255,255,255,0.9));
+        }
+
+    @@keyframes fairyFloat {
+
+        0% {
+            transform: translateY(120vh) rotate(0deg);
+        }
+
+        100% {
+            transform: translateY(-120vh) rotate(360deg);
+        }
+    }
+
+    .main-container {
+        max-width: 1350px;
+        margin: auto;
+        padding: 45px 25px;
+    }
+
+    /* HERO SECTION */
+
+    .hero {
+        text-align: center;
+        padding: 60px;
+        border-radius: 45px;
+        background: linear-gradient( 135deg, rgba(255,255,255,0.58), rgba(255,240,245,0.65), rgba(240,255,240,0.60), rgba(255,250,230,0.55) );
+        backdrop-filter: blur(18px);
+        box-shadow: 0 15px 45px rgba(255,105,180,0.18), 0 0 40px rgba(255,255,255,0.35);
+        border: 2px solid rgba(255,255,255,0.5);
+        margin-bottom: 45px;
+    }
+
+        .hero h1 {
+            font-size: 95px;
+            margin-bottom: 12px;
+            font-weight: 900;
+            background: linear-gradient( to right, #ff5ca8, #ffd166, #8bd17c, #89c2ff, #d291ff );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 6px 20px rgba(255,255,255,0.5);
+        }
+
+        .hero p {
+            font-size: 25px;
+            color: #8c6b88;
+            line-height: 1.8;
+        }
+
+    .magic-quote {
+        margin-top: 18px;
+        font-size: 22px;
+        font-style: italic;
+        color: #a26f91;
+    }
+
+    /* TOP CARDS */
+
+    .top-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 28px;
+        margin-bottom: 40px;
+    }
+
+    .info-card {
+        background: linear-gradient( 135deg, rgba(255,255,255,0.55), rgba(255,240,245,0.65), rgba(240,255,240,0.60) );
+        backdrop-filter: blur(15px);
+        border-radius: 35px;
+        padding: 35px;
+        text-align: center;
+        box-shadow: 0 12px 35px rgba(255,105,180,0.18);
+        border: 2px solid rgba(255,255,255,0.45);
+        transition: 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+        .info-card:hover {
+            transform: translateY(-8px) scale(1.03);
+        }
+
+        .info-card::before {
+            content: "🌸";
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 36px;
+            opacity: 0.25;
+        }
+
+    .info-title {
+        font-size: 22px;
+        color: #d45b95;
+        margin-bottom: 15px;
+        font-weight: 700;
+    }
+
+    .info-value {
+        font-size: 42px;
+        font-weight: bold;
+        color: #ff4f95;
+    }
+
+    /* TABLE */
+
+    .sensor-card {
+        background: linear-gradient( 135deg, rgba(255,255,255,0.60), rgba(255,240,245,0.60), rgba(240,255,240,0.60) );
+        backdrop-filter: blur(18px);
+        border-radius: 40px;
+        padding: 35px;
+        box-shadow: 0 15px 45px rgba(255,105,180,0.18);
+        border: 2px solid rgba(255,255,255,0.45);
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        overflow: hidden;
+        border-radius: 30px;
+    }
+
+    thead {
+        background: linear-gradient( to right, #ff9ec4, #ffd166, #95d5b2, #a0c4ff, #d0a2f7 );
+        color: #6d4361;
+    }
+
+        thead th {
+            padding: 24px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+    tbody tr {
+        transition: all 0.25s ease;
+    }
+
+        tbody tr:nth-child(even) {
+            background: rgba(255,255,255,0.30);
+        }
+
+        tbody tr:hover {
+            background: rgba(255,255,255,0.55);
+            transform: scale(1.01);
+        }
+
+    tbody td {
+        padding: 20px;
+        text-align: center;
+        font-size: 18px;
+        border-bottom: 1px solid rgba(255,255,255,0.45);
+    }
+
+    .temp {
+        font-size: 28px;
+        font-weight: bold;
+        color: #ff4f95;
+        text-shadow: 0 0 12px rgba(255,105,180,0.35);
+    }
+
+    .device {
+        font-size: 20px;
+        font-weight: 700;
+        color: #845d85;
+    }
+
+    .footer {
+        text-align: center;
+        margin-top: 45px;
+        font-size: 24px;
+        color: #d46a97;
+        font-weight: 700;
+    }
+
+    .empty-box {
+        background: linear-gradient( 135deg, rgba(255,255,255,0.60), rgba(255,240,245,0.60), rgba(240,255,240,0.60) );
+        border-radius: 40px;
+        padding: 55px;
+        text-align: center;
+        box-shadow: 0 10px 35px rgba(255,105,180,0.18);
+    }
+
+</style>
+
+<div class="flowers">
+
+    <span style="left:2%; animation-duration:20s;">🌸</span>
+    <span style="left:8%; animation-duration:24s;">🌷</span>
+    <span style="left:15%; animation-duration:18s;">🌼</span>
+    <span style="left:22%; animation-duration:25s;">🦋</span>
+    <span style="left:30%; animation-duration:20s;">✨</span>
+    <span style="left:38%; animation-duration:22s;">🌺</span>
+    <span style="left:46%; animation-duration:19s;">🪻</span>
+    <span style="left:54%; animation-duration:27s;">🍃</span>
+    <span style="left:62%; animation-duration:21s;">🌸</span>
+    <span style="left:70%; animation-duration:24s;">🌷</span>
+    <span style="left:78%; animation-duration:18s;">💐</span>
+    <span style="left:86%; animation-duration:23s;">🧚</span>
+    <span style="left:94%; animation-duration:20s;">🌿</span>
+
+</div>
+
+<div class="main-container">
+
+    <div class="hero">
+
+        <div style="font-size:38px; margin-bottom:15px;">
+            🌸 🌷 🌼 ✨ 🦋 🌿 🌺 💐 🪻
+        </div>
+
+        <h1>Fairy Bloom IoT</h1>
+
+        <p>
+            Magical spring monitoring from your dreamy flower powered device ✨
+        </p>
+
+        <div class="magic-quote">
+            ✨ where technology blooms like a sakura forest ✨
+        </div>
+
+    </div>
+
+    @if (Model != null && Model.Any())
+    {
+        var latest = Model.First();
+
+        <div class="top-cards">
+
+            <div class="info-card">
+
+                <div class="info-title">
+                    🌸 Device Name
+                </div>
+
+                <div class="info-value" style="font-size:34px;">
+                    @latest.DeviceId
+                </div>
+
+            </div>
+
+            <div class="info-card">
+
+                <div class="info-title">
+                    🌡 Current Temperature
+                </div>
+
+                <div class="info-value">
+                    @latest.Temperature.ToString("0.0") °C
+                </div>
+
+            </div>
+
+            <div class="info-card">
+
+                <div class="info-title">
+                    🕒 Last Update
+                </div>
+
+                <div style="font-size:22px; font-weight:700; color:#c15b8e;">
+                    @latest.Timestamp.ToLocalTime().ToString("dd/MM/yyyy HH:mm:ss")
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="sensor-card">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>🌸 Device</th>
+                        <th>🌡 Temperature</th>
+                        <th>🕒 Date & Time</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+
+                            <td class="device">
+                                🌸 @item.DeviceId
+                            </td>
+
+                            <td class="temp">
+                                @item.Temperature.ToString("0.0") °C
+                            </td>
+
+                            <td>
+                                @item.Timestamp.ToLocalTime().ToString("dd/MM/yyyy HH:mm:ss")
+                            </td>
+
+                        </tr>
+                    }
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+        <div class="footer">
+
+            🌸 🌷 🌼 ✨ 🦋 🍃 🌿 💐 🌺 🌸
+
+            <br /><br />
+
+            sakura trees • fairy forest • spring magic • blooming dreams
+
+            <br /><br />
+
+            🌸 🌷 🌼 ✨ 🦋 🍃 🌿 💐 🌺 🌸
+
+        </div>
+    }
+    else
+    {
+        <div class="empty-box">
+
+            <h2 style="color:#ff4f95;">
+                🌷 No sensor data yet 🌷
+            </h2>
+
+            <p style="font-size:22px; color:#8c6b88;">
+                Waiting for your cute little IoT fairy device to bloom ✨
+            </p>
+
+        </div>
+    }
+
+</div>
+```

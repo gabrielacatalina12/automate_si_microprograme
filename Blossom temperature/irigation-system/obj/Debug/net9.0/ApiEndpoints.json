@@ -1,0 +1,18 @@
+[
+  {
+    "ContainingType": "irigation_system.Controllers.DataController",
+    "Method": "PostData",
+    "RelativePath": "api/Data",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "incomingData",
+        "Type": "irigation_system.Models.SensorData",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

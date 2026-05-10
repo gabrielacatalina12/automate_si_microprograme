@@ -1,0 +1,397 @@
+/*
+ * Copyright (c) 2016, Freescale Semiconductor, Inc.
+ * Copyright 2016-2020,2022-2024 NXP
+ * All rights reserved.
+ *
+ * SPDX-License-Identifier: BSD-3-Clause
+ */
+
+/*******************************************************************************
+ * Includes
+ ******************************************************************************/
+#include "lwip/opt.h"
+#include "lwip/timeouts.h"
+#include "lwip/init.h"
+#include "lwip/dhcp.h"
+#include "netif/ethernet.h"
+#include "ethernetif.h"
+
+#include "board.h"
+#include "app.h"
+#include "fsl_phy.h"
+#include "fsl_silicon_id.h"
+
+
+
+#include <string.h>
+#include <stdio.h>
+#include <math.h>
+
+#include "fsl_lpadc.h"
+#include "fsl_spc.h"
+
+/*******************************************************************************
+ * Definitions
+ ******************************************************************************/
+
+#ifndef EXAMPLE_NETIF_INIT_FN
+#define EXAMPLE_NETIF_INIT_FN ethernetif0_init
+#endif
+
+#define ADC_CHANNEL_NUMBER 0U
+#define ADC_COMMAND_ID     1U
+#define ADC_TRIGGER_ID     0U
+#define ADC_VREF_MV        3300U
+#define ADC_12BIT_MAX      4095U
+
+/* KY-028 NTC thermistor parameters */
+#define NTC_NOMINAL_RESISTANCE 10000.0f
+#define NTC_NOMINAL_TEMP       25.0f
+#define NTC_BETA               3950.0f
+#define NTC_SERIES_RESISTOR    10000.0f
+#define KELVIN_OFFSET          273.15f
+
+/*******************************************************************************
+ * Prototypes
+ ******************************************************************************/
+
+static void http_client_demo_result(void *arg,
+                                    int status_code,
+                                    const char *body,
+                                    u16_t body_len);
+
+/* Funcția trebuie să existe în pin_mux.c */
+void BOARD_InitADCPins(void);
+
+static void ADC_Init(void);
+static uint32_t ADC_ReadRaw(void);
+static float ReadTemperatureC(uint32_t *rawValueOut, uint32_t *millivoltsOut);
+
+/*******************************************************************************
+ * Variables
+ ******************************************************************************/
+
+static phy_handle_t phyHandle;
+
+/*******************************************************************************
+ * Code
+ ******************************************************************************/
+
+void SysTick_Handler(void)
+{
+    time_isr();
+}
+
+static void http_client_demo_result(void *arg,
+                                    int status_code,
+                                    const char *body,
+                                    u16_t body_len)
+{
+    (void)arg;
+
+    PRINTF("\r\n--- HTTP Client POST Result ---\r\n");
+    PRINTF(" Status code: %d\r\n", status_code);
+
+    if (body != NULL && body_len > 0)
+    {
+        PRINTF(" Body (%u bytes): %.*s\r\n",
+               (unsigned int)body_len,
+               (int)body_len,
+               body);
+    }
+
+    PRINTF("-------------------------------\r\n");
+}
+
+/*******************************************************************************
+ * ADC functions
+ ******************************************************************************/
+
+static void ADC_Init(void)
+{
+    lpadc_config_t adcConfig;
+    lpadc_conv_command_config_t cmdConfig;
+    lpadc_conv_trigger_config_t trigConfig;
+
+    /*
+     * Enable VREF analog module via SPC.
+     * Required for ADC voltage reference.
+     */
+    SPC_EnableActiveModeAnalogModules(SPC0, kSPC_controlVref);
+
+    /*
+     * Enable ADC0 clock.
+     */
+    CLOCK_AttachClk(kFRO_HF_to_ADC0);
+    CLOCK_SetClkDiv(kCLOCK_DivAdc0Clk, 1U);
+    CLOCK_EnableClock(kCLOCK_Adc0);
+
+    /*
+     * Initialize LPADC.
+     */
+    LPADC_GetDefaultConfig(&adcConfig);
+    adcConfig.referenceVoltageSource = kLPADC_ReferenceVoltageAlt2;
+    LPADC_Init(ADC0, &adcConfig);
+    LPADC_DoAutoCalibration(ADC0);
+
+    /*
+     * Configure command 1:
+     * channel 0 side A, 12-bit, single-ended.
+     */
+    LPADC_GetDefaultConvCommandConfig(&cmdConfig);
+    cmdConfig.channelNumber = ADC_CHANNEL_NUMBER;
+    cmdConfig.sampleChannelMode = kLPADC_SampleChannelSingleEndSideA;
+    cmdConfig.conversionResolutionMode = kLPADC_ConversionResolutionStandard;
+    LPADC_SetConvCommandConfig(ADC0, ADC_COMMAND_ID, &cmdConfig);
+
+    /*
+     * Configure trigger 0:
+     * software trigger.
+     */
+    LPADC_GetDefaultConvTriggerConfig(&trigConfig);
+    trigConfig.targetCommandId = ADC_COMMAND_ID;
+    trigConfig.enableHardwareTrigger = false;
+    LPADC_SetConvTriggerConfig(ADC0, ADC_TRIGGER_ID, &trigConfig);
+}
+
+static uint32_t ADC_ReadRaw(void)
+{
+    lpadc_conv_result_t result;
+
+    LPADC_DoSoftwareTrigger(ADC0, 1U);
+
+    while (!LPADC_GetConvResult(ADC0, &result, 0U))
+    {
+    }
+
+    /*
+     * 12-bit value is in upper bits.
+     */
+    return result.convValue >> 3U;
+}
+
+static float ReadTemperatureC(uint32_t *rawValueOut, uint32_t *millivoltsOut)
+{
+    uint32_t rawValue = ADC_ReadRaw();
+    uint32_t millivolts = (rawValue * ADC_VREF_MV) / ADC_12BIT_MAX;
+
+    if (rawValueOut != NULL)
+    {
+        *rawValueOut = rawValue;
+    }
+
+    if (millivoltsOut != NULL)
+    {
+        *millivoltsOut = millivolts;
+    }
+
+    /*
+     * Convert ADC reading to temperature using Beta equation.
+     *
+     * KY-028 divider:
+     * VCC -> R_fixed -> AO -> NTC -> GND
+     *
+     * R_ntc = R_fixed * ADC / (ADC_MAX - ADC)
+     */
+    if (rawValue > 0U && rawValue < ADC_12BIT_MAX)
+    {
+        float resistance = NTC_SERIES_RESISTOR * (float)rawValue /
+                           (float)(ADC_12BIT_MAX - rawValue);
+
+        float steinhart = logf(resistance / NTC_NOMINAL_RESISTANCE) / NTC_BETA;
+        steinhart += 1.0f / (NTC_NOMINAL_TEMP + KELVIN_OFFSET);
+
+        return (1.0f / steinhart) - KELVIN_OFFSET;
+    }
+
+    return 0.0f;
+}
+
+/*******************************************************************************
+ * Main
+ ******************************************************************************/
+
+int main(void)
+{
+    struct netif netif;
+    ip4_addr_t netif_ipaddr;
+    ip4_addr_t netif_netmask;
+    ip4_addr_t netif_gw;
+
+    ethernetif_config_t enet_config = {
+        .phyHandle   = &phyHandle,
+        .phyAddr     = EXAMPLE_PHY_ADDRESS,
+        .phyOps      = EXAMPLE_PHY_OPS,
+        .phyResource = EXAMPLE_PHY_RESOURCE,
+    };
+
+    /*
+     * Board initialization.
+     */
+    BOARD_InitHardware();
+
+    /*
+     * ADC pin initialization.
+     * BOARD_InitADCPins() must be defined in pin_mux.c.
+     */
+//    BOARD_InitADCPins();
+
+    /*
+     * ADC peripheral initialization.
+     */
+    ADC_Init();
+
+    /*
+     * Time initialization for lwIP.
+     */
+    time_init();
+
+    /*
+     * Ethernet MAC configuration.
+     */
+    (void)SILICONID_ConvertToMacAddr(&enet_config.macAddress);
+    enet_config.srcClockHz = EXAMPLE_CLOCK_FREQ;
+
+    /*
+     * Start with 0.0.0.0.
+     * DHCP will assign the IPv4 address.
+     */
+    IP4_ADDR(&netif_ipaddr, 0, 0, 0, 0);
+    IP4_ADDR(&netif_netmask, 0, 0, 0, 0);
+    IP4_ADDR(&netif_gw, 0, 0, 0, 0);
+
+    lwip_init();
+
+    netif_add(&netif,
+              &netif_ipaddr,
+              &netif_netmask,
+              &netif_gw,
+              &enet_config,
+              EXAMPLE_NETIF_INIT_FN,
+              ethernet_input);
+
+    netif_set_default(&netif);
+    netif_set_up(&netif);
+
+    while (ethernetif_wait_linkup(&netif, 5000) != ERR_OK)
+    {
+        PRINTF("PHY Auto-negotiation failed. Please check the cable connection and link partner setting.\r\n");
+    }
+
+    dhcp_start(&netif);
+
+    PRINTF("\r\nWaiting for DHCP address...\r\n");
+
+    while (dhcp_supplied_address(&netif) == 0)
+    {
+        ethernetif_input(&netif);
+        sys_check_timeouts();
+    }
+
+    PRINTF("\r\n***********************************************************\r\n");
+    PRINTF(" HTTP Client + Temperature Sensor example\r\n");
+    PRINTF("***********************************************************\r\n");
+    PRINTF(" IPv4 Address     : %s\r\n", ip4addr_ntoa(netif_ip4_addr(&netif)));
+    PRINTF(" IPv4 Subnet mask : %s\r\n", ip4addr_ntoa(netif_ip4_netmask(&netif)));
+    PRINTF(" IPv4 Gateway     : %s\r\n", ip4addr_ntoa(netif_ip4_gw(&netif)));
+    PRINTF("***********************************************************\r\n");
+
+    /*
+     * Read temperature and send it once to the ASP.NET server.
+     *
+     * Server:
+     * http://10.14.122.96:5075/api/temperature
+     */
+    {
+        ip_addr_t demo_server_ip;
+
+        uint32_t rawValue = 0U;
+        uint32_t millivolts = 0U;
+
+        float tempC = ReadTemperatureC(&rawValue, &millivolts);
+
+        /*
+         * PRINTF_FLOAT_ENABLE is 0 in your project,
+         * so we manually split the float into integer and decimal parts.
+         */
+        int tempSign = 1;
+        if (tempC < 0.0f)
+        {
+            tempSign = -1;
+            tempC = -tempC;
+        }
+
+        int tempInt = (int)tempC;
+        int tempFrac = (int)((tempC - (float)tempInt) * 100.0f);
+
+        if (tempFrac < 0)
+        {
+            tempFrac = -tempFrac;
+        }
+
+        char demo_body[64];
+
+        if (tempSign < 0)
+        {
+            snprintf(demo_body,
+                     sizeof(demo_body),
+                     "{\"temp\":-%d.%02d}",
+                     tempInt,
+                     tempFrac);
+        }
+        else
+        {
+            snprintf(demo_body,
+                     sizeof(demo_body),
+                     "{\"temp\":%d.%02d}",
+                     tempInt,
+                     tempFrac);
+        }
+
+        PRINTF("ADC: %u  Voltage: %u.%03u V\r\n",
+               rawValue,
+               millivolts / 1000U,
+               millivolts % 1000U);
+
+        if (tempSign < 0)
+        {
+            PRINTF("Temperature read: -%d.%02d C\r\n", tempInt, tempFrac);
+        }
+        else
+        {
+            PRINTF("Temperature read: %d.%02d C\r\n", tempInt, tempFrac);
+        }
+
+        PRINTF("JSON sent: %s\r\n", demo_body);
+
+        /*
+         * IP-ul laptopului pe cablu.
+         */
+        IP_ADDR4(&demo_server_ip, 10, 14, 122, 96);
+
+        err_t err = http_client_post(&demo_server_ip,
+                                     5075,
+                                     "/api/temperature",
+                                     "application/json",
+                                     demo_body,
+                                     (u16_t)strlen(demo_body),
+                                     http_client_demo_result,
+                                     NULL);
+
+        if (err != ERR_OK)
+        {
+            PRINTF("HTTP Client POST failed to start: %d\r\n", (int)err);
+        }
+        else
+        {
+            PRINTF("HTTP Client POST request initiated to %s:5075\r\n",
+                   ipaddr_ntoa(&demo_server_ip));
+        }
+    }
+
+    while (1)
+    {
+        ethernetif_input(&netif);
+        sys_check_timeouts();
+    }
+}

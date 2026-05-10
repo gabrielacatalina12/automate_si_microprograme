@@ -1,0 +1,249 @@
+﻿@{
+    ViewData["Title"] = "Fairy Spring Privacy";
+}
+
+<style>
+
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Segoe UI', sans-serif;
+        background: linear-gradient(rgba(255,255,255,0.60), rgba(255,255,255,0.60)), url('https://images.unsplash.com/photo-1462275646964-a0e3386b89fa?q=80&w=2070&auto=format&fit=crop');
+        background-size: cover;
+        background-attachment: fixed;
+        overflow-x: hidden;
+        color: #5d4b62;
+    }
+
+    /* MAGIC PARTICLES */
+
+    .magic-container {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        pointer-events: none;
+        z-index: -1;
+    }
+
+        .magic-container span {
+            position: absolute;
+            display: block;
+            animation: floatMagic linear infinite;
+            opacity: 0.85;
+        }
+
+    @@keyframes floatMagic {
+
+        0% {
+            transform: translateY(110vh) rotate(0deg);
+        }
+
+        100% {
+            transform: translateY(-120vh) rotate(360deg);
+        }
+    }
+
+    /* MAIN */
+
+    .main-container {
+        max-width: 1150px;
+        margin: auto;
+        padding: 45px 25px;
+    }
+
+    /* HERO */
+
+    .hero {
+        text-align: center;
+        padding: 55px;
+        border-radius: 45px;
+        background: linear-gradient( 135deg, rgba(255,192,203,0.35), rgba(255,255,180,0.35), rgba(180,255,210,0.35), rgba(210,220,255,0.35) );
+        backdrop-filter: blur(18px);
+        box-shadow: 0 15px 45px rgba(255,105,180,0.20), 0 10px 30px rgba(100,255,150,0.15);
+        border: 2px solid rgba(255,255,255,0.45);
+        margin-bottom: 45px;
+    }
+
+        .hero h1 {
+            font-size: 82px;
+            margin-bottom: 15px;
+            font-weight: 900;
+            background: linear-gradient( to right, #ff4fa3, #ffae42, #7ed957, #6fa8ff, #c77dff );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 4px 15px rgba(255,255,255,0.4);
+        }
+
+        .hero p {
+            font-size: 24px;
+            color: #6e6e6e;
+            line-height: 1.7;
+        }
+
+    .hero-icons {
+        font-size: 42px;
+        margin-bottom: 20px;
+    }
+
+    /* CARDS */
+
+    .section-card {
+        background: rgba(255,255,255,0.45);
+        backdrop-filter: blur(18px);
+        border-radius: 35px;
+        padding: 35px;
+        margin-bottom: 28px;
+        transition: 0.3s ease;
+        border: 2px solid rgba(255,255,255,0.4);
+        box-shadow: 0 10px 30px rgba(255,105,180,0.12), 0 10px 25px rgba(130,255,170,0.12);
+    }
+
+        .section-card:hover {
+            transform: translateY(-6px) scale(1.01);
+            background: rgba(255,255,255,0.58);
+        }
+
+        .section-card h2 {
+            font-size: 34px;
+            margin-bottom: 15px;
+            color: #ff4fa3;
+        }
+
+        .section-card p {
+            font-size: 19px;
+            line-height: 1.9;
+            color: #555;
+        }
+
+    /* FAIRY BOX */
+
+    .fairy-box {
+        margin-top: 40px;
+        text-align: center;
+        padding: 40px;
+        border-radius: 40px;
+        background: linear-gradient( 135deg, rgba(255,190,220,0.7), rgba(255,255,190,0.7), rgba(180,255,210,0.7), rgba(210,220,255,0.7) );
+        box-shadow: 0 12px 35px rgba(255,105,180,0.15), 0 12px 35px rgba(120,255,170,0.15);
+    }
+
+        .fairy-box h3 {
+            font-size: 42px;
+            color: #ff4fa3;
+            margin-bottom: 15px;
+        }
+
+        .fairy-box p {
+            font-size: 20px;
+            color: #5f5f5f;
+            line-height: 1.8;
+        }
+
+    /* FLOWER DIVIDER */
+
+    .flower-divider {
+        text-align: center;
+        font-size: 34px;
+        margin: 20px 0;
+    }
+
+</style>
+
+<!-- MAGIC FLOATING THINGS -->
+
+<div class="magic-container">
+
+    <span style="left:3%; font-size:34px; animation-duration:18s;">🌸</span>
+    <span style="left:10%; font-size:28px; animation-duration:24s;">🍃</span>
+    <span style="left:18%; font-size:35px; animation-duration:20s;">🦋</span>
+    <span style="left:27%; font-size:40px; animation-duration:27s;">🌷</span>
+    <span style="left:38%; font-size:32px; animation-duration:19s;">✨</span>
+    <span style="left:48%; font-size:38px; animation-duration:25s;">🌼</span>
+    <span style="left:58%; font-size:30px; animation-duration:22s;">🍀</span>
+    <span style="left:67%; font-size:42px; animation-duration:28s;">💐</span>
+    <span style="left:77%; font-size:34px; animation-duration:20s;">🌺</span>
+    <span style="left:87%; font-size:29px; animation-duration:26s;">🧚</span>
+    <span style="left:95%; font-size:34px; animation-duration:21s;">🌿</span>
+
+</div>
+
+<div class="main-container">
+
+    <!-- HERO -->
+
+    <div class="hero">
+
+        <div class="hero-icons">
+            🌸 🌷 🌼 🦋 🍃 ✨ 🌺
+        </div>
+
+        <h1>Fairy Spring Garden</h1>
+
+        <p>
+            A magical pastel IoT experience inspired by blooming flowers,
+            fairy forests, butterflies, spring trees and dreamy nature vibes ✨
+        </p>
+
+    </div>
+
+    <!-- CARD 1 -->
+
+    <div class="section-card">
+
+        <h2>🌸 About The Garden</h2>
+
+        <p>
+            This colorful IoT dashboard receives live temperature data
+            from the FRDM-MCXN947 development board and transforms it
+            into a magical spring themed monitoring experience.
+        </p>
+
+    </div>
+
+    <!-- CARD 2 -->
+
+    <div class="section-card">
+
+        <h2>🌿 Nature Inspired Monitoring</h2>
+
+        <p>
+            Every sensor value blooms inside a soft fairy inspired interface
+            filled with flowers, pastel skies, floating petals,
+            glowing colors and dreamy spring animations.
+        </p>
+
+    </div>
+
+    <!-- CARD 3 -->
+
+    <div class="section-card">
+
+        <h2>🦋 Safe & Peaceful</h2>
+
+        <p>
+            Only device information, temperature values and timestamps
+            are stored locally. No personal information is collected.
+            Everything stays inside your cozy little spring garden 🌷
+        </p>
+
+    </div>
+
+    <div class="flower-divider">
+        🌸 🌼 🌷 🦋 ✨ 🍃 💐 🌺
+    </div>
+
+    <!-- FAIRY BOX -->
+
+    <div class="fairy-box">
+
+        <h3>🧚 Spring Fairy Technology 🧚</h3>
+
+        <p>
+            Embedded systems + networking + ASP.NET +
+            magical spring aesthetics =
+            the cutest fantasy IoT dashboard ever ✨🌸
+        </p>
+
+    </div>
+
+</div>

@@ -1,0 +1,1333 @@
+!SESSION 2026-05-07 20:17:43.464 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=17.0.9
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 1 0 2026-05-07 20:18:01.087
+!MESSAGE Recreating part support. No part support available.
+
+!ENTRY org.eclipse.egit.ui 2 0 2026-05-07 20:18:03.848
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Msi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 1 0 2026-05-07 20:18:05.745
+!MESSAGE The device 'MCXN947' (version='1.0.0') from SDK 'SDK_2.x_FRDM-MCXN947' (version='26.03.00', build='epluginsite817 2026-03-27') will be installed.
+
+!ENTRY org.eclipse.cdt.core 1 0 2026-05-07 20:19:05.547
+!MESSAGE Indexed 'frdmmcxn947_lwip_httpsrv_bm_cm33_core0' (119 sources, 282 headers) in 8.04 sec: 22,168 declarations; 103,435 references; 0 unresolved inclusions; 0 syntax errors; 38 unresolved names (0.03%)
+
+!ENTRY com.crt.log 1 0 2026-05-07 20:19:19.168
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2026-05-07 20:19:19.177
+!MESSAGE RedlinkServer telnet session connected on port 3025->59357 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-05-07 20:19:27.228
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_25.6.131/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=59358, -g, -mi, -2, -pMCXN947, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/Msi/Desktop/workspace/frdm-mcxn947-http-client-example-main/frdmmcxn947_lwip_httpsrv_bm_cm33_core0/Debug, --flash-dir, C:/nxp/LinkServer_25.6.131/binaries/Flash, --flash-dir, C:/Users/Msi/Desktop/workspace/frdm-mcxn947-http-client-example-main/.mcuxpressoide_packages_support/MCXN947_support/Flash, --telnet, 3330, --romstalldelay, 600 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2026-05-07 20:19:29.920
+!MESSAGE Telnet session connected on port 3330->59371 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.core 4 0 2026-05-07 20:22:57.710
+!MESSAGE Error: Cannot invoke "org.eclipse.cdt.internal.core.CConfigBasedDescriptorManager.getDescriptor(org.eclipse.core.resources.IProject, boolean)" because the return value of "org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getDescriptorManager()" is null
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.eclipse.cdt.internal.core.CConfigBasedDescriptorManager.getDescriptor(org.eclipse.core.resources.IProject, boolean)" because the return value of "org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getDescriptorManager()" is null
+	at org.eclipse.cdt.core.CCorePlugin.getCProjectDescription(CCorePlugin.java:881)
+	at org.eclipse.cdt.make.internal.core.scannerconfig2.ScannerConfigInfoFactory2$ScannerConfigInfoSet.load(ScannerConfigInfoFactory2.java:102)
+	at org.eclipse.cdt.make.internal.core.scannerconfig2.ScannerConfigInfoFactory2$ScannerConfigInfoSet.<init>(ScannerConfigInfoFactory2.java:96)
+	at org.eclipse.cdt.make.internal.core.scannerconfig2.ScannerConfigInfoFactory2.createInfoSet(ScannerConfigInfoFactory2.java:1373)
+	at org.eclipse.cdt.make.internal.core.scannerconfig2.ScannerConfigProfileManager.createScannerConfigBuildInfo2Set(ScannerConfigProfileManager.java:223)
+	at org.eclipse.cdt.build.internal.core.scannerconfig2.CfgScannerConfigInfoFactory2$CfgInfo.getContainer(CfgScannerConfigInfoFactory2.java:118)
+	at org.eclipse.cdt.build.internal.core.scannerconfig2.CfgScannerConfigInfoFactory2$CfgInfo.createMap(CfgScannerConfigInfoFactory2.java:144)
+	at org.eclipse.cdt.build.internal.core.scannerconfig2.CfgScannerConfigInfoFactory2$CfgInfo.getInfo(CfgScannerConfigInfoFactory2.java:83)
+	at org.eclipse.cdt.build.internal.core.scannerconfig.CfgDiscoveredPathManager.getContextInfo(CfgDiscoveredPathManager.java:433)
+	at org.eclipse.cdt.build.internal.core.scannerconfig.CfgDiscoveredPathManager.getContextInfo(CfgDiscoveredPathManager.java:418)
+	at org.eclipse.cdt.build.internal.core.scannerconfig.CfgDiscoveredPathManager.getDiscoveredInfo(CfgDiscoveredPathManager.java:168)
+	at org.eclipse.cdt.managedbuilder.internal.dataprovider.ProfileInfoProvider.getEntryValues(ProfileInfoProvider.java:68)
+	at org.eclipse.cdt.managedbuilder.internal.dataprovider.BuildEntryStorage.getDiscoveredEntries(BuildEntryStorage.java:203)
+	at org.eclipse.cdt.managedbuilder.internal.dataprovider.BuildEntryStorage.putEntriesToLevel(BuildEntryStorage.java:193)
+	at org.eclipse.cdt.core.settings.model.util.AbstractEntryStorage.initCache(AbstractEntryStorage.java:74)
+	at org.eclipse.cdt.core.settings.model.util.AbstractEntryStorage.getEntries(AbstractEntryStorage.java:37)
+	at org.eclipse.cdt.managedbuilder.internal.dataprovider.BuildLanguageData.getEntries(BuildLanguageData.java:163)
+	at org.eclipse.cdt.core.settings.model.extension.impl.CDefaultLanguageData.getEntriesToCopy(CDefaultLanguageData.java:100)
+	at org.eclipse.cdt.core.settings.model.extension.impl.CDefaultLanguageData.createStore(CDefaultLanguageData.java:91)
+	at org.eclipse.cdt.core.settings.model.extension.impl.CDefaultLanguageData.copySettingsFrom(CDefaultLanguageData.java:84)
+	at org.eclipse.cdt.internal.core.settings.model.CLanguageSettingCache.copySettingsFrom(CLanguageSettingCache.java:49)
+	at org.eclipse.cdt.internal.core.settings.model.CLanguageSettingCache.<init>(CLanguageSettingCache.java:38)
+	at org.eclipse.cdt.internal.core.settings.model.CFolderDescriptionCache.copyLanguageData(CFolderDescriptionCache.java:82)
+	at org.eclipse.cdt.core.settings.model.extension.impl.CDefaultFolderData.copyDataFrom(CDefaultFolderData.java:60)
+	at org.eclipse.cdt.internal.core.settings.model.CFolderDescriptionCache.<init>(CFolderDescriptionCache.java:40)
+	at org.eclipse.cdt.internal.core.settings.model.CConfigurationDescriptionCache.copyFolderData(CConfigurationDescriptionCache.java:242)
+	at org.eclipse.cdt.core.settings.model.extension.impl.CDefaultConfigurationData.copySettingsFrom(CDefaultConfigurationData.java:117)
+	at org.eclipse.cdt.internal.core.settings.model.CConfigurationDescriptionCache.loadData(CConfigurationDescriptionCache.java:154)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescription.loadDatas(CProjectDescription.java:199)
+	at org.eclipse.cdt.internal.core.settings.model.xml.XmlProjectDescriptionStorage.loadProjectDescription(XmlProjectDescriptionStorage.java:509)
+	at org.eclipse.cdt.internal.core.settings.model.xml.XmlProjectDescriptionStorage.getProjectDescription(XmlProjectDescriptionStorage.java:239)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescriptionInternal(CProjectDescriptionManager.java:426)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescription(CProjectDescriptionManager.java:408)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescription(CProjectDescriptionManager.java:402)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescription(CProjectDescriptionManager.java:395)
+	at org.eclipse.cdt.internal.core.language.settings.providers.LanguageSettingsScannerInfoProvider.getScannerInformation(LanguageSettingsScannerInfoProvider.java:78)
+	at org.eclipse.cdt.internal.core.language.settings.providers.LanguageSettingsScannerInfoProvider.getScannerInformation(LanguageSettingsScannerInfoProvider.java:1)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.getScannerInfo(TranslationUnit.java:1070)
+	at org.eclipse.cdt.internal.core.pdom.indexer.ProjectIndexerInputAdapter.getBuildConfiguration(ProjectIndexerInputAdapter.java:160)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.getScannerInfo(AbstractIndexerTask.java:1030)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.parseLinkage(AbstractIndexerTask.java:909)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.runTask(AbstractIndexerTask.java:572)
+	at org.eclipse.cdt.internal.core.pdom.indexer.PDOMIndexerTask.run(PDOMIndexerTask.java:164)
+	at org.eclipse.cdt.internal.core.pdom.indexer.PDOMUpdateTask.run(PDOMUpdateTask.java:96)
+	at org.eclipse.cdt.internal.core.pdom.PDOMIndexerJob.run(PDOMIndexerJob.java:160)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.jobs 4 2 2026-05-07 20:22:57.716
+!MESSAGE An internal error occurred during: "C/C++ Indexer".
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.eclipse.cdt.internal.core.CConfigBasedDescriptorManager.getDescriptor(org.eclipse.core.resources.IProject, boolean)" because the return value of "org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getDescriptorManager()" is null
+	at org.eclipse.cdt.core.CCorePlugin.getCProjectDescription(CCorePlugin.java:881)
+	at org.eclipse.cdt.make.internal.core.scannerconfig2.ScannerConfigInfoFactory2$ScannerConfigInfoSet.load(ScannerConfigInfoFactory2.java:102)
+	at org.eclipse.cdt.make.internal.core.scannerconfig2.ScannerConfigInfoFactory2$ScannerConfigInfoSet.<init>(ScannerConfigInfoFactory2.java:96)
+	at org.eclipse.cdt.make.internal.core.scannerconfig2.ScannerConfigInfoFactory2.createInfoSet(ScannerConfigInfoFactory2.java:1373)
+	at org.eclipse.cdt.make.internal.core.scannerconfig2.ScannerConfigProfileManager.createScannerConfigBuildInfo2Set(ScannerConfigProfileManager.java:223)
+	at org.eclipse.cdt.build.internal.core.scannerconfig2.CfgScannerConfigInfoFactory2$CfgInfo.getContainer(CfgScannerConfigInfoFactory2.java:118)
+	at org.eclipse.cdt.build.internal.core.scannerconfig2.CfgScannerConfigInfoFactory2$CfgInfo.createMap(CfgScannerConfigInfoFactory2.java:144)
+	at org.eclipse.cdt.build.internal.core.scannerconfig2.CfgScannerConfigInfoFactory2$CfgInfo.getInfo(CfgScannerConfigInfoFactory2.java:83)
+	at org.eclipse.cdt.build.internal.core.scannerconfig.CfgDiscoveredPathManager.getContextInfo(CfgDiscoveredPathManager.java:433)
+	at org.eclipse.cdt.build.internal.core.scannerconfig.CfgDiscoveredPathManager.getContextInfo(CfgDiscoveredPathManager.java:418)
+	at org.eclipse.cdt.build.internal.core.scannerconfig.CfgDiscoveredPathManager.getDiscoveredInfo(CfgDiscoveredPathManager.java:168)
+	at org.eclipse.cdt.managedbuilder.internal.dataprovider.ProfileInfoProvider.getEntryValues(ProfileInfoProvider.java:68)
+	at org.eclipse.cdt.managedbuilder.internal.dataprovider.BuildEntryStorage.getDiscoveredEntries(BuildEntryStorage.java:203)
+	at org.eclipse.cdt.managedbuilder.internal.dataprovider.BuildEntryStorage.putEntriesToLevel(BuildEntryStorage.java:193)
+	at org.eclipse.cdt.core.settings.model.util.AbstractEntryStorage.initCache(AbstractEntryStorage.java:74)
+	at org.eclipse.cdt.core.settings.model.util.AbstractEntryStorage.getEntries(AbstractEntryStorage.java:37)
+	at org.eclipse.cdt.managedbuilder.internal.dataprovider.BuildLanguageData.getEntries(BuildLanguageData.java:163)
+	at org.eclipse.cdt.core.settings.model.extension.impl.CDefaultLanguageData.getEntriesToCopy(CDefaultLanguageData.java:100)
+	at org.eclipse.cdt.core.settings.model.extension.impl.CDefaultLanguageData.createStore(CDefaultLanguageData.java:91)
+	at org.eclipse.cdt.core.settings.model.extension.impl.CDefaultLanguageData.copySettingsFrom(CDefaultLanguageData.java:84)
+	at org.eclipse.cdt.internal.core.settings.model.CLanguageSettingCache.copySettingsFrom(CLanguageSettingCache.java:49)
+	at org.eclipse.cdt.internal.core.settings.model.CLanguageSettingCache.<init>(CLanguageSettingCache.java:38)
+	at org.eclipse.cdt.internal.core.settings.model.CFolderDescriptionCache.copyLanguageData(CFolderDescriptionCache.java:82)
+	at org.eclipse.cdt.core.settings.model.extension.impl.CDefaultFolderData.copyDataFrom(CDefaultFolderData.java:60)
+	at org.eclipse.cdt.internal.core.settings.model.CFolderDescriptionCache.<init>(CFolderDescriptionCache.java:40)
+	at org.eclipse.cdt.internal.core.settings.model.CConfigurationDescriptionCache.copyFolderData(CConfigurationDescriptionCache.java:242)
+	at org.eclipse.cdt.core.settings.model.extension.impl.CDefaultConfigurationData.copySettingsFrom(CDefaultConfigurationData.java:117)
+	at org.eclipse.cdt.internal.core.settings.model.CConfigurationDescriptionCache.loadData(CConfigurationDescriptionCache.java:154)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescription.loadDatas(CProjectDescription.java:199)
+	at org.eclipse.cdt.internal.core.settings.model.xml.XmlProjectDescriptionStorage.loadProjectDescription(XmlProjectDescriptionStorage.java:509)
+	at org.eclipse.cdt.internal.core.settings.model.xml.XmlProjectDescriptionStorage.getProjectDescription(XmlProjectDescriptionStorage.java:239)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescriptionInternal(CProjectDescriptionManager.java:426)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescription(CProjectDescriptionManager.java:408)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescription(CProjectDescriptionManager.java:402)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescription(CProjectDescriptionManager.java:395)
+	at org.eclipse.cdt.internal.core.language.settings.providers.LanguageSettingsScannerInfoProvider.getScannerInformation(LanguageSettingsScannerInfoProvider.java:78)
+	at org.eclipse.cdt.internal.core.language.settings.providers.LanguageSettingsScannerInfoProvider.getScannerInformation(LanguageSettingsScannerInfoProvider.java:1)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.getScannerInfo(TranslationUnit.java:1070)
+	at org.eclipse.cdt.internal.core.pdom.indexer.ProjectIndexerInputAdapter.getBuildConfiguration(ProjectIndexerInputAdapter.java:160)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.getScannerInfo(AbstractIndexerTask.java:1030)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.parseLinkage(AbstractIndexerTask.java:909)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.runTask(AbstractIndexerTask.java:572)
+	at org.eclipse.cdt.internal.core.pdom.indexer.PDOMIndexerTask.run(PDOMIndexerTask.java:164)
+	at org.eclipse.cdt.internal.core.pdom.indexer.PDOMUpdateTask.run(PDOMUpdateTask.java:96)
+	at org.eclipse.cdt.internal.core.pdom.PDOMIndexerJob.run(PDOMIndexerJob.java:160)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.debug.core 4 125 2026-05-07 20:23:02.541
+!MESSAGE Error logged from Debug Core: 
+!STACK 1
+org.eclipse.debug.core.DebugException: Terminate failed
+	at org.eclipse.debug.core.Launch.terminate(Launch.java:296)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunch.terminate(GdbLaunch.java:313)
+	at org.eclipse.debug.internal.core.LaunchManager.shutdown(LaunchManager.java:2209)
+	at org.eclipse.debug.core.DebugPlugin.stop(DebugPlugin.java:712)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:875)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:867)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:1046)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:376)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:660)
+	at org.eclipse.osgi.container.Module.stop(Module.java:521)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1893)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1768)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:275)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:208)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:660)
+	at org.eclipse.osgi.container.Module.stop(Module.java:521)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:207)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:226)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+!SUBENTRY 1 org.eclipse.debug.core 4 5010 2026-05-07 20:23:02.542
+!MESSAGE Terminate failed
+
+!ENTRY org.eclipse.core.resources 2 10035 2026-05-07 20:23:02.569
+!MESSAGE The workspace will exit with unsaved changes in this session.
+
+!ENTRY org.eclipse.core.jobs 4 2 2026-05-07 20:23:02.581
+!MESSAGE An internal error occurred during: "Execute Debug Command".
+!STACK 0
+org.eclipse.core.runtime.AssertionFailedException: assertion failed: The application has not been initialized.
+	at org.eclipse.core.runtime.Assert.isTrue(Assert.java:119)
+	at org.eclipse.core.internal.runtime.InternalPlatform.assertInitialized(InternalPlatform.java:183)
+	at org.eclipse.core.internal.runtime.InternalPlatform.getAdapterManager(InternalPlatform.java:204)
+	at org.eclipse.core.runtime.Platform.getAdapterManager(Platform.java:662)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunch.getAdapter(GdbLaunch.java:454)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunch.disconnect(GdbLaunch.java:338)
+	at org.eclipse.debug.internal.core.commands.DisconnectCommand.execute(DisconnectCommand.java:35)
+	at org.eclipse.debug.internal.core.commands.ForEachCommand.doExecute(ForEachCommand.java:36)
+	at org.eclipse.debug.core.commands.AbstractDebugCommand$1.run(AbstractDebugCommand.java:215)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.jobs 2 2 2026-05-07 20:23:02.904
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.cdt.dsf.gdb.internal.ui.console.GdbBasicCliConsole$InputReadJob
+!SESSION 2026-05-07 20:24:54.137 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=17.0.9
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2026-05-07 20:24:59.951
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.egit.ui 2 0 2026-05-07 20:25:10.734
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Msi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY com.crt.log 1 0 2026-05-07 20:34:15.563
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2026-05-07 20:34:16.574
+!MESSAGE RedlinkServer telnet session connected on port 3025->57498 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 104 2026-05-07 20:34:19.747
+!MESSAGE Program file does not exist
+!STACK 0
+java.io.FileNotFoundException: C:\Users\Msi\Desktop\workspace\frdm-mcxn947-http-client-example-main\frdmmcxn947_lwip_httpsrv_bm_cm33_core0\Debug\frdmmcxn947_lwip_httpsrv_bm_cm33_core0.axf not found
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:130)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.checkBinaryDetails(GdbLaunchDelegate.java:330)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:152)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LinkServerGdbLaunchDelegate.launch(LinkServerGdbLaunchDelegate.java:156)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:805)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1040)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1243)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 104 2026-05-07 20:34:19.748
+!MESSAGE C:\Users\Msi\Desktop\workspace\frdm-mcxn947-http-client-example-main\frdmmcxn947_lwip_httpsrv_bm_cm33_core0\Debug\frdmmcxn947_lwip_httpsrv_bm_cm33_core0.axf not found
+!STACK 0
+java.io.FileNotFoundException: C:\Users\Msi\Desktop\workspace\frdm-mcxn947-http-client-example-main\frdmmcxn947_lwip_httpsrv_bm_cm33_core0\Debug\frdmmcxn947_lwip_httpsrv_bm_cm33_core0.axf not found
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:130)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.checkBinaryDetails(GdbLaunchDelegate.java:330)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:152)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LinkServerGdbLaunchDelegate.launch(LinkServerGdbLaunchDelegate.java:156)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:805)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1040)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1243)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2026-05-07 20:34:19.863
+!MESSAGE Request for monitor: 'NOTHING_BEING_DEBUGGED' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2026-05-07 20:34:19.864
+!MESSAGE Request for monitor: 'NOTHING_BEING_DEBUGGED' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2026-05-07 20:34:19.864
+!MESSAGE Request for monitor: 'NOTHING_BEING_DEBUGGED' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2026-05-07 20:34:19.865
+!MESSAGE Request for monitor: 'NOTHING_BEING_DEBUGGED' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2026-05-07 20:34:19.865
+!MESSAGE Request for monitor: 'NOTHING_BEING_DEBUGGED' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2026-05-07 20:34:19.865
+!MESSAGE Request for monitor: 'NOTHING_BEING_DEBUGGED' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 104 2026-05-07 20:36:14.355
+!MESSAGE Program file does not exist
+!STACK 0
+java.io.FileNotFoundException: C:\Users\Msi\Desktop\workspace\frdm-mcxn947-http-client-example-main\frdmmcxn947_lwip_httpsrv_bm_cm33_core0\Debug\frdmmcxn947_lwip_httpsrv_bm_cm33_core0.axf not found
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:130)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.checkBinaryDetails(GdbLaunchDelegate.java:330)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:152)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LinkServerGdbLaunchDelegate.launch(LinkServerGdbLaunchDelegate.java:156)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:805)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1040)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1243)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 104 2026-05-07 20:36:14.355
+!MESSAGE C:\Users\Msi\Desktop\workspace\frdm-mcxn947-http-client-example-main\frdmmcxn947_lwip_httpsrv_bm_cm33_core0\Debug\frdmmcxn947_lwip_httpsrv_bm_cm33_core0.axf not found
+!STACK 0
+java.io.FileNotFoundException: C:\Users\Msi\Desktop\workspace\frdm-mcxn947-http-client-example-main\frdmmcxn947_lwip_httpsrv_bm_cm33_core0\Debug\frdmmcxn947_lwip_httpsrv_bm_cm33_core0.axf not found
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:130)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.checkBinaryDetails(GdbLaunchDelegate.java:330)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:152)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LinkServerGdbLaunchDelegate.launch(LinkServerGdbLaunchDelegate.java:156)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:805)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1040)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1243)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2026-05-07 20:36:14.477
+!MESSAGE Request for monitor: 'NOTHING_BEING_DEBUGGED' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2026-05-07 20:36:14.478
+!MESSAGE Request for monitor: 'NOTHING_BEING_DEBUGGED' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2026-05-07 20:36:14.478
+!MESSAGE Request for monitor: 'NOTHING_BEING_DEBUGGED' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2026-05-07 20:36:14.478
+!MESSAGE Request for monitor: 'NOTHING_BEING_DEBUGGED' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2026-05-07 20:36:14.479
+!MESSAGE Request for monitor: 'NOTHING_BEING_DEBUGGED' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2026-05-07 20:36:14.479
+!MESSAGE Request for monitor: 'NOTHING_BEING_DEBUGGED' resulted in a rejected execution exception.
+
+!ENTRY com.crt.log 1 0 2026-05-07 20:36:34.556
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2026-05-07 20:36:35.563
+!MESSAGE RedlinkServer telnet session connected on port 3025->56448 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 104 2026-05-07 20:36:38.006
+!MESSAGE Program file does not exist
+!STACK 0
+java.io.FileNotFoundException: C:\Users\Msi\Desktop\workspace\frdm-mcxn947-http-client-example-main\frdmmcxn947_lwip_httpsrv_bm_cm33_core0\Debug\frdmmcxn947_lwip_httpsrv_bm_cm33_core0.axf not found
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:130)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.checkBinaryDetails(GdbLaunchDelegate.java:330)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:152)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LinkServerGdbLaunchDelegate.launch(LinkServerGdbLaunchDelegate.java:156)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:805)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1040)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1243)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 104 2026-05-07 20:36:38.006
+!MESSAGE C:\Users\Msi\Desktop\workspace\frdm-mcxn947-http-client-example-main\frdmmcxn947_lwip_httpsrv_bm_cm33_core0\Debug\frdmmcxn947_lwip_httpsrv_bm_cm33_core0.axf not found
+!STACK 0
+java.io.FileNotFoundException: C:\Users\Msi\Desktop\workspace\frdm-mcxn947-http-client-example-main\frdmmcxn947_lwip_httpsrv_bm_cm33_core0\Debug\frdmmcxn947_lwip_httpsrv_bm_cm33_core0.axf not found
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:130)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.checkBinaryDetails(GdbLaunchDelegate.java:330)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:152)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LinkServerGdbLaunchDelegate.launch(LinkServerGdbLaunchDelegate.java:156)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:805)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1040)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1243)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2026-05-07 20:36:38.130
+!MESSAGE Request for monitor: 'NOTHING_BEING_DEBUGGED' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2026-05-07 20:36:38.130
+!MESSAGE Request for monitor: 'NOTHING_BEING_DEBUGGED' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2026-05-07 20:36:38.131
+!MESSAGE Request for monitor: 'NOTHING_BEING_DEBUGGED' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2026-05-07 20:36:38.131
+!MESSAGE Request for monitor: 'NOTHING_BEING_DEBUGGED' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2026-05-07 20:36:38.131
+!MESSAGE Request for monitor: 'NOTHING_BEING_DEBUGGED' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2026-05-07 20:36:38.131
+!MESSAGE Request for monitor: 'NOTHING_BEING_DEBUGGED' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.tm.terminal.connector.cdtserial 4 0 2026-05-07 20:36:42.511
+!MESSAGE Error opening \\.\COM6 (5)
+!STACK 0
+java.io.IOException: Error opening \\.\COM6 (5)
+	at org.eclipse.cdt.serial.SerialPort.open0(Native Method)
+	at org.eclipse.cdt.serial.SerialPort.open(SerialPort.java:316)
+	at org.eclipse.tm.terminal.connector.cdtserial.connector.SerialConnector.connect(SerialConnector.java:80)
+	at org.eclipse.tm.internal.terminal.connector.TerminalConnector.connect(TerminalConnector.java:182)
+	at org.eclipse.tm.internal.terminal.emulator.VT100TerminalControl.connectTerminal(VT100TerminalControl.java:435)
+	at org.eclipse.tm.terminal.view.ui.tabs.TabFolderManager.createTabItem(TabFolderManager.java:330)
+	at org.eclipse.tm.terminal.view.ui.manager.ConsoleManager.openConsole(ConsoleManager.java:489)
+	at org.eclipse.tm.terminal.view.ui.services.TerminalService$2.doRun(TerminalService.java:304)
+	at org.eclipse.tm.terminal.view.ui.services.TerminalService$2.lambda$0(TerminalService.java:274)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4046)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3662)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:342)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:648)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:342)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:555)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:651)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:588)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1459)
+
+!ENTRY com.crt.log 1 0 2026-05-07 20:37:18.311
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2026-05-07 20:37:19.318
+!MESSAGE RedlinkServer telnet session connected on port 3025->64377 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 104 2026-05-07 20:37:25.094
+!MESSAGE Program file does not exist
+!STACK 0
+java.io.FileNotFoundException: C:\Users\Msi\Desktop\workspace\frdm-mcxn947-http-client-example-main\frdmmcxn947_lwip_httpsrv_bm_cm33_core0\Debug\frdmmcxn947_lwip_httpsrv_bm_cm33_core0.axf not found
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:130)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.checkBinaryDetails(GdbLaunchDelegate.java:330)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:152)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LinkServerGdbLaunchDelegate.launch(LinkServerGdbLaunchDelegate.java:156)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:805)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1040)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1243)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 104 2026-05-07 20:37:25.094
+!MESSAGE C:\Users\Msi\Desktop\workspace\frdm-mcxn947-http-client-example-main\frdmmcxn947_lwip_httpsrv_bm_cm33_core0\Debug\frdmmcxn947_lwip_httpsrv_bm_cm33_core0.axf not found
+!STACK 0
+java.io.FileNotFoundException: C:\Users\Msi\Desktop\workspace\frdm-mcxn947-http-client-example-main\frdmmcxn947_lwip_httpsrv_bm_cm33_core0\Debug\frdmmcxn947_lwip_httpsrv_bm_cm33_core0.axf not found
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:130)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.checkBinaryDetails(GdbLaunchDelegate.java:330)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:152)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LinkServerGdbLaunchDelegate.launch(LinkServerGdbLaunchDelegate.java:156)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:805)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1040)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1243)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2026-05-07 20:37:25.225
+!MESSAGE Request for monitor: 'NOTHING_BEING_DEBUGGED' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2026-05-07 20:37:25.226
+!MESSAGE Request for monitor: 'NOTHING_BEING_DEBUGGED' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2026-05-07 20:37:25.226
+!MESSAGE Request for monitor: 'NOTHING_BEING_DEBUGGED' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2026-05-07 20:37:25.226
+!MESSAGE Request for monitor: 'NOTHING_BEING_DEBUGGED' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2026-05-07 20:37:25.227
+!MESSAGE Request for monitor: 'NOTHING_BEING_DEBUGGED' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2026-05-07 20:37:25.227
+!MESSAGE Request for monitor: 'NOTHING_BEING_DEBUGGED' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 104 2026-05-07 20:45:49.024
+!MESSAGE Program file does not exist
+!STACK 0
+java.io.FileNotFoundException: C:\Users\Msi\Desktop\workspace\frdm-mcxn947-http-client-example-main\frdmmcxn947_lwip_httpsrv_bm_cm33_core0\Debug\frdmmcxn947_lwip_httpsrv_bm_cm33_core0.axf not found
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:130)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.checkBinaryDetails(GdbLaunchDelegate.java:330)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:152)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LinkServerGdbLaunchDelegate.launch(LinkServerGdbLaunchDelegate.java:156)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:805)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1040)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1243)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 104 2026-05-07 20:45:49.024
+!MESSAGE C:\Users\Msi\Desktop\workspace\frdm-mcxn947-http-client-example-main\frdmmcxn947_lwip_httpsrv_bm_cm33_core0\Debug\frdmmcxn947_lwip_httpsrv_bm_cm33_core0.axf not found
+!STACK 0
+java.io.FileNotFoundException: C:\Users\Msi\Desktop\workspace\frdm-mcxn947-http-client-example-main\frdmmcxn947_lwip_httpsrv_bm_cm33_core0\Debug\frdmmcxn947_lwip_httpsrv_bm_cm33_core0.axf not found
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:130)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.checkBinaryDetails(GdbLaunchDelegate.java:330)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:152)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LinkServerGdbLaunchDelegate.launch(LinkServerGdbLaunchDelegate.java:156)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:805)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1040)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1243)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2026-05-07 20:45:49.146
+!MESSAGE Request for monitor: 'NOTHING_BEING_DEBUGGED' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2026-05-07 20:45:49.147
+!MESSAGE Request for monitor: 'NOTHING_BEING_DEBUGGED' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2026-05-07 20:45:49.147
+!MESSAGE Request for monitor: 'NOTHING_BEING_DEBUGGED' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2026-05-07 20:45:49.147
+!MESSAGE Request for monitor: 'NOTHING_BEING_DEBUGGED' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2026-05-07 20:45:49.148
+!MESSAGE Request for monitor: 'NOTHING_BEING_DEBUGGED' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2026-05-07 20:45:49.148
+!MESSAGE Request for monitor: 'NOTHING_BEING_DEBUGGED' resulted in a rejected execution exception.
+!SESSION 2026-05-10 17:10:43.765 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=17.0.9
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.egit.ui 2 0 2026-05-10 17:11:52.143
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Msi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2026-05-10 17:21:20.525 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=17.0.9
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.egit.ui 2 0 2026-05-10 17:21:35.251
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Msi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2026-05-10 19:06:21.741 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=17.0.9
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.egit.ui 2 0 2026-05-10 19:07:23.734
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Msi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY com.crt.log 1 0 2026-05-10 19:15:10.087
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2026-05-10 19:15:11.093
+!MESSAGE RedlinkServer telnet session connected on port 3025->63190 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-05-10 19:15:14.444
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_25.6.131/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=63191, -g, -mi, -2, -pMCXN947, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/Msi/Desktop/workspace/frdm-mcxn947-http-client-example-main/frdmmcxn947_lwip_httpsrv_bm_cm33_core0/Debug, --flash-dir, C:/nxp/LinkServer_25.6.131/binaries/Flash, --flash-dir, C:/Users/Msi/Desktop/workspace/frdm-mcxn947-http-client-example-main/.mcuxpressoide_packages_support/MCXN947_support/Flash, --telnet, 3330, --romstalldelay, 600 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2026-05-10 19:15:17.148
+!MESSAGE Telnet session connected on port 3330->63204 @ 127.0.0.1
+
+!ENTRY org.eclipse.tm.terminal.connector.cdtserial 4 0 2026-05-10 19:15:24.160
+!MESSAGE Error opening \\.\COM6 (5)
+!STACK 0
+java.io.IOException: Error opening \\.\COM6 (5)
+	at org.eclipse.cdt.serial.SerialPort.open0(Native Method)
+	at org.eclipse.cdt.serial.SerialPort.open(SerialPort.java:316)
+	at org.eclipse.tm.terminal.connector.cdtserial.connector.SerialConnector.connect(SerialConnector.java:80)
+	at org.eclipse.tm.internal.terminal.connector.TerminalConnector.connect(TerminalConnector.java:182)
+	at org.eclipse.tm.internal.terminal.emulator.VT100TerminalControl.connectTerminal(VT100TerminalControl.java:435)
+	at org.eclipse.tm.terminal.view.ui.tabs.TabFolderManager.createTabItem(TabFolderManager.java:330)
+	at org.eclipse.tm.terminal.view.ui.manager.ConsoleManager.openConsole(ConsoleManager.java:489)
+	at org.eclipse.tm.terminal.view.ui.services.TerminalService$2.doRun(TerminalService.java:304)
+	at org.eclipse.tm.terminal.view.ui.services.TerminalService$2.lambda$0(TerminalService.java:274)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4046)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3662)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:342)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:648)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:342)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:555)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:651)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:588)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1459)
+
+!ENTRY com.crt.log 1 0 2026-05-10 19:15:34.955
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2026-05-10 19:15:35.960
+!MESSAGE RedlinkServer telnet session connected on port 3025->63207 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-05-10 19:15:48.295
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2026-05-10 19:15:49.300
+!MESSAGE RedlinkServer telnet session connected on port 3025->63209 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-05-10 19:15:51.978
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_25.6.131/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=63210, -g, -mi, -2, -pMCXN947, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/Msi/Desktop/workspace/frdm-mcxn947-http-client-example-main/frdmmcxn947_lwip_httpsrv_bm_cm33_core0/Debug, --flash-dir, C:/nxp/LinkServer_25.6.131/binaries/Flash, --flash-dir, C:/Users/Msi/Desktop/workspace/frdm-mcxn947-http-client-example-main/.mcuxpressoide_packages_support/MCXN947_support/Flash, --telnet, 3330, --romstalldelay, 600 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2026-05-10 19:15:54.686
+!MESSAGE Telnet session connected on port 3330->63223 @ 127.0.0.1
+
+!ENTRY org.eclipse.jface 2 0 2026-05-10 19:15:58.654
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2026-05-10 19:15:58.654
+!MESSAGE A conflict occurred for CTRL+INSERT:
+Binding(CTRL+INSERT,
+	ParameterizedCommand(Command(org.eclipse.tm.terminal.copy,Copy,
+		,
+		Category(org.eclipse.tm.terminal.category1,Terminal view commands,Terminal view commands,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.tm.terminal.copy"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.tm.terminal.EditContext,,,system)
+Binding(CTRL+INSERT,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.copy,Copy,
+		Copy the selection to the clipboard,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.ui.edit.copy"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.dialogAndWindow,,,system)
+Binding(CTRL+INSERT,
+	ParameterizedCommand(Command(AnsiConsole.command.copy_without_escapes,Copy Text Without ANSI Escapes,
+		Copy the console content to clipboard, removing the escape sequences,
+		Category(AnsiConsole.command.categoryid,ANSI Support Commands,null,true),
+		WorkbenchHandlerServiceHandler("AnsiConsole.command.copy_without_escapes"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.console.ConsoleView,,,system)
+
+!ENTRY org.eclipse.tm.terminal.connector.cdtserial 4 0 2026-05-10 19:16:04.272
+!MESSAGE Error opening \\.\COM6 (5)
+!STACK 0
+java.io.IOException: Error opening \\.\COM6 (5)
+	at org.eclipse.cdt.serial.SerialPort.open0(Native Method)
+	at org.eclipse.cdt.serial.SerialPort.open(SerialPort.java:316)
+	at org.eclipse.tm.terminal.connector.cdtserial.connector.SerialConnector.connect(SerialConnector.java:80)
+	at org.eclipse.tm.internal.terminal.connector.TerminalConnector.connect(TerminalConnector.java:182)
+	at org.eclipse.tm.internal.terminal.emulator.VT100TerminalControl.connectTerminal(VT100TerminalControl.java:435)
+	at org.eclipse.tm.terminal.view.ui.tabs.TabFolderManager.createTabItem(TabFolderManager.java:330)
+	at org.eclipse.tm.terminal.view.ui.manager.ConsoleManager.openConsole(ConsoleManager.java:489)
+	at org.eclipse.tm.terminal.view.ui.services.TerminalService$2.doRun(TerminalService.java:304)
+	at org.eclipse.tm.terminal.view.ui.services.TerminalService$2.lambda$0(TerminalService.java:274)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4046)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3662)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:342)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:648)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:342)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:555)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:651)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:588)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1459)
+
+!ENTRY com.crt.log 1 0 2026-05-10 19:16:35.638
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2026-05-10 19:16:36.645
+!MESSAGE RedlinkServer telnet session connected on port 3025->62450 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-05-10 19:16:54.868
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2026-05-10 19:16:55.883
+!MESSAGE RedlinkServer telnet session connected on port 3025->62453 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-05-10 19:16:58.411
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_25.6.131/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=62454, -g, -mi, -2, -pMCXN947, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/Msi/Desktop/workspace/frdm-mcxn947-http-client-example-main/frdmmcxn947_lwip_httpsrv_bm_cm33_core0/Debug, --flash-dir, C:/nxp/LinkServer_25.6.131/binaries/Flash, --flash-dir, C:/Users/Msi/Desktop/workspace/frdm-mcxn947-http-client-example-main/.mcuxpressoide_packages_support/MCXN947_support/Flash, --telnet, 3330, --romstalldelay, 600 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2026-05-10 19:17:01.137
+!MESSAGE Telnet session connected on port 3330->62467 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-05-10 19:19:04.684
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2026-05-10 19:19:05.690
+!MESSAGE RedlinkServer telnet session connected on port 3025->49377 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-05-10 19:19:08.129
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_25.6.131/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=64124, -g, -mi, -2, -pMCXN947, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/Msi/Desktop/workspace/frdm-mcxn947-http-client-example-main/frdmmcxn947_lwip_httpsrv_bm_cm33_core0/Debug, --flash-dir, C:/nxp/LinkServer_25.6.131/binaries/Flash, --flash-dir, C:/Users/Msi/Desktop/workspace/frdm-mcxn947-http-client-example-main/.mcuxpressoide_packages_support/MCXN947_support/Flash, --telnet, 3330, --romstalldelay, 600 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2026-05-10 19:19:10.822
+!MESSAGE Telnet session connected on port 3330->64141 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 4 2026-05-10 19:25:52.316
+!MESSAGE NullPointerException while trying to calculated source lookup path. This can be ignored if it occurs while terminating a debug session. See Bug 500988.
+!STACK 0
+java.lang.NullPointerException: Cannot read the array length because "containers" is null
+	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupDirector.collectSubstitutionsPaths(GdbSourceLookupDirector.java:102)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupDirector.collectSubstitutionsPaths(GdbSourceLookupDirector.java:146)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupDirector.getSubstitutionsPaths(GdbSourceLookupDirector.java:72)
+	at org.eclipse.cdt.dsf.gdb.service.GDBSourceLookup.getSubstitutionsPaths(GDBSourceLookup.java:124)
+	at org.eclipse.cdt.dsf.gdb.service.GDBSourceLookup.sourceContainersChanged(GDBSourceLookup.java:139)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupParticipant.sourceContainersChangedOnDispatchThread(GdbSourceLookupParticipant.java:120)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupParticipant$1.run(GdbSourceLookupParticipant.java:85)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+
+!ENTRY com.nxp.mcuxpresso.core.debug 4 0 2026-05-10 19:25:52.324
+!MESSAGE There is already a running debug session for the launch configuration 'frdmmcxn947_lwip_httpsrv_bm_cm33_core0 LinkServer Debug'.
+
+!ENTRY com.crt.log 1 0 2026-05-10 19:26:08.133
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2026-05-10 19:26:09.141
+!MESSAGE RedlinkServer telnet session connected on port 3025->53069 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-05-10 19:26:11.629
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_25.6.131/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=53070, -g, -mi, -2, -pMCXN947, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/Msi/Desktop/workspace/frdm-mcxn947-http-client-example-main/frdmmcxn947_lwip_httpsrv_bm_cm33_core0/Debug, --flash-dir, C:/nxp/LinkServer_25.6.131/binaries/Flash, --flash-dir, C:/Users/Msi/Desktop/workspace/frdm-mcxn947-http-client-example-main/.mcuxpressoide_packages_support/MCXN947_support/Flash, --telnet, 3330, --romstalldelay, 600 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2026-05-10 19:26:14.124
+!MESSAGE Telnet session connected on port 3330->53082 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-05-10 19:30:40.256
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2026-05-10 19:30:41.272
+!MESSAGE RedlinkServer telnet session connected on port 3025->65115 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-05-10 19:30:43.662
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_25.6.131/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=65116, -g, -mi, -2, -pMCXN947, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/Msi/Desktop/workspace/frdm-mcxn947-http-client-example-main/frdmmcxn947_lwip_httpsrv_bm_cm33_core0/Debug, --flash-dir, C:/nxp/LinkServer_25.6.131/binaries/Flash, --flash-dir, C:/Users/Msi/Desktop/workspace/frdm-mcxn947-http-client-example-main/.mcuxpressoide_packages_support/MCXN947_support/Flash, --telnet, 3330, --romstalldelay, 600 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2026-05-10 19:30:46.350
+!MESSAGE Telnet session connected on port 3330->65129 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-05-10 19:47:30.392
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2026-05-10 19:47:31.398
+!MESSAGE RedlinkServer telnet session connected on port 3025->49673 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-05-10 19:47:34.180
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_25.6.131/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=49674, -g, -mi, -2, -pMCXN947, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/Msi/Desktop/workspace/frdm-mcxn947-http-client-example-main/frdmmcxn947_lwip_httpsrv_bm_cm33_core0/Debug, --flash-dir, C:/nxp/LinkServer_25.6.131/binaries/Flash, --flash-dir, C:/Users/Msi/Desktop/workspace/frdm-mcxn947-http-client-example-main/.mcuxpressoide_packages_support/MCXN947_support/Flash, --telnet, 3330, --romstalldelay, 600 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2026-05-10 19:47:36.904
+!MESSAGE Telnet session connected on port 3330->49688 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-05-10 19:50:41.785
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2026-05-10 19:50:42.802
+!MESSAGE RedlinkServer telnet session connected on port 3025->53309 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-05-10 19:50:45.470
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_25.6.131/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=53310, -g, -mi, -2, -pMCXN947, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/Msi/Desktop/workspace/frdm-mcxn947-http-client-example-main/frdmmcxn947_lwip_httpsrv_bm_cm33_core0/Debug, --flash-dir, C:/nxp/LinkServer_25.6.131/binaries/Flash, --flash-dir, C:/Users/Msi/Desktop/workspace/frdm-mcxn947-http-client-example-main/.mcuxpressoide_packages_support/MCXN947_support/Flash, --telnet, 3330, --romstalldelay, 600 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2026-05-10 19:50:47.992
+!MESSAGE Telnet session connected on port 3330->53322 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-05-10 19:53:00.553
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2026-05-10 19:53:01.569
+!MESSAGE RedlinkServer telnet session connected on port 3025->54520 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-05-10 19:53:04.204
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_25.6.131/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=54521, -g, -mi, -2, -pMCXN947, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/Msi/Desktop/workspace/frdm-mcxn947-http-client-example-main/frdmmcxn947_lwip_httpsrv_bm_cm33_core0/Debug, --flash-dir, C:/nxp/LinkServer_25.6.131/binaries/Flash, --flash-dir, C:/Users/Msi/Desktop/workspace/frdm-mcxn947-http-client-example-main/.mcuxpressoide_packages_support/MCXN947_support/Flash, --telnet, 3330, --romstalldelay, 600 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2026-05-10 19:53:06.909
+!MESSAGE Telnet session connected on port 3330->54534 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-05-10 19:55:38.397
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2026-05-10 19:55:39.411
+!MESSAGE RedlinkServer telnet session connected on port 3025->56279 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-05-10 19:55:41.822
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_25.6.131/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=56280, -g, -mi, -2, -pMCXN947, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/Msi/Desktop/workspace/frdm-mcxn947-http-client-example-main/frdmmcxn947_lwip_httpsrv_bm_cm33_core0/Debug, --flash-dir, C:/nxp/LinkServer_25.6.131/binaries/Flash, --flash-dir, C:/Users/Msi/Desktop/workspace/frdm-mcxn947-http-client-example-main/.mcuxpressoide_packages_support/MCXN947_support/Flash, --telnet, 3330, --romstalldelay, 600 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2026-05-10 19:55:44.348
+!MESSAGE Telnet session connected on port 3330->56292 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-05-10 19:58:55.906
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2026-05-10 19:58:56.922
+!MESSAGE RedlinkServer telnet session connected on port 3025->60186 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-05-10 19:58:59.427
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_25.6.131/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=60187, -g, -mi, -2, -pMCXN947, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/Msi/Desktop/workspace/frdm-mcxn947-http-client-example-main/frdmmcxn947_lwip_httpsrv_bm_cm33_core0/Debug, --flash-dir, C:/nxp/LinkServer_25.6.131/binaries/Flash, --flash-dir, C:/Users/Msi/Desktop/workspace/frdm-mcxn947-http-client-example-main/.mcuxpressoide_packages_support/MCXN947_support/Flash, --telnet, 3330, --romstalldelay, 600 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2026-05-10 19:59:01.961
+!MESSAGE Telnet session connected on port 3330->60199 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-05-10 20:02:53.155
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2026-05-10 20:02:54.174
+!MESSAGE RedlinkServer telnet session connected on port 3025->55811 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-05-10 20:02:56.740
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_25.6.131/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=55812, -g, -mi, -2, -pMCXN947, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/Msi/Desktop/workspace/frdm-mcxn947-http-client-example-main/frdmmcxn947_lwip_httpsrv_bm_cm33_core0/Debug, --flash-dir, C:/nxp/LinkServer_25.6.131/binaries/Flash, --flash-dir, C:/Users/Msi/Desktop/workspace/frdm-mcxn947-http-client-example-main/.mcuxpressoide_packages_support/MCXN947_support/Flash, --telnet, 3330, --romstalldelay, 600 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2026-05-10 20:02:59.428
+!MESSAGE Telnet session connected on port 3330->55825 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug 4 0 2026-05-10 20:04:09.516
+!MESSAGE There is already a running debug session for the launch configuration 'frdmmcxn947_lwip_httpsrv_bm_cm33_core0 LinkServer Debug'.
+
+!ENTRY com.crt.log 1 0 2026-05-10 20:04:43.090
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2026-05-10 20:04:44.107
+!MESSAGE RedlinkServer telnet session connected on port 3025->56817 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-05-10 20:04:46.649
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_25.6.131/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=56818, -g, -mi, -2, -pMCXN947, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/Msi/Desktop/workspace/frdm-mcxn947-http-client-example-main/frdmmcxn947_lwip_httpsrv_bm_cm33_core0/Debug, --flash-dir, C:/nxp/LinkServer_25.6.131/binaries/Flash, --flash-dir, C:/Users/Msi/Desktop/workspace/frdm-mcxn947-http-client-example-main/.mcuxpressoide_packages_support/MCXN947_support/Flash, --telnet, 3330, --romstalldelay, 600 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2026-05-10 20:04:49.348
+!MESSAGE Telnet session connected on port 3330->56831 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-05-10 20:10:51.708
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2026-05-10 20:10:52.713
+!MESSAGE RedlinkServer telnet session connected on port 3025->63454 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-05-10 20:10:55.178
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_25.6.131/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=63455, -g, -mi, -2, -pMCXN947, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/Msi/Desktop/workspace/frdm-mcxn947-http-client-example-main/frdmmcxn947_lwip_httpsrv_bm_cm33_core0/Debug, --flash-dir, C:/nxp/LinkServer_25.6.131/binaries/Flash, --flash-dir, C:/Users/Msi/Desktop/workspace/frdm-mcxn947-http-client-example-main/.mcuxpressoide_packages_support/MCXN947_support/Flash, --telnet, 3330, --romstalldelay, 600 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2026-05-10 20:10:57.712
+!MESSAGE Telnet session connected on port 3330->63467 @ 127.0.0.1
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2026-05-10 20:11:25.040
+!MESSAGE Execution exception for: ParameterizedCommand(Command(org.eclipse.cdt.make.ui.targetBuildLastCommand,Rebuild Last Target,
+		Rebuild the last make target for the selected container or project.,
+		Category(org.eclipse.ui.category.project,Project,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.cdt.make.ui.targetBuildLastCommand"),
+		,,true),null) in 
+	context chain: WorkbenchContext -> org.eclipse.ui.contexts.dialog
+!STACK 0
+org.eclipse.core.commands.ExecutionException: Error executing 'org.eclipse.cdt.make.ui.targetBuildLastCommand': java.lang.NullPointerException: Cannot invoke "org.eclipse.ui.IWorkbenchWindow.getActivePage()" because "this.fWindow" is null
+	at org.eclipse.e4.core.commands.internal.HandlerServiceHandler.execute(HandlerServiceHandler.java:179)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:488)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:485)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.executeHandler(HandlerServiceImpl.java:213)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.executeCommand(KeyBindingDispatcher.java:308)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.press(KeyBindingDispatcher.java:580)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.processKeyEvent(KeyBindingDispatcher.java:655)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.filterKeySequenceBindings(KeyBindingDispatcher.java:439)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher$KeyDownFilter.handleEvent(KeyBindingDispatcher.java:96)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1286)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1065)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1090)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1075)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1117)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1113)
+	at org.eclipse.swt.widgets.Widget.wmKeyDown(Widget.java:1840)
+	at org.eclipse.swt.widgets.Control.WM_KEYDOWN(Control.java:5153)
+	at org.eclipse.swt.widgets.Table.WM_KEYDOWN(Table.java:5898)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4776)
+	at org.eclipse.swt.widgets.Table.windowProc(Table.java:5814)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5039)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3657)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:823)
+	at org.eclipse.jface.window.Window.open(Window.java:799)
+	at org.eclipse.cdt.make.ui.actions.BuildLastTargetAction.run(BuildLastTargetAction.java:91)
+	at org.eclipse.cdt.make.ui.actions.BuildLastTargetHandler.execute(BuildLastTargetHandler.java:42)
+	at org.eclipse.ui.internal.handlers.HandlerProxy.execute(HandlerProxy.java:283)
+	at org.eclipse.ui.internal.handlers.E4HandlerProxy.execute(E4HandlerProxy.java:99)
+	at jdk.internal.reflect.GeneratedMethodAccessor105.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:298)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:232)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:174)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceHandler.execute(HandlerServiceHandler.java:165)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:488)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:485)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.executeHandler(HandlerServiceImpl.java:213)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.executeCommand(KeyBindingDispatcher.java:308)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.press(KeyBindingDispatcher.java:580)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.processKeyEvent(KeyBindingDispatcher.java:655)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.filterKeySequenceBindings(KeyBindingDispatcher.java:439)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher$KeyDownFilter.handleEvent(KeyBindingDispatcher.java:96)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1286)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1065)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1090)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1075)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1117)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1113)
+	at org.eclipse.swt.widgets.Widget.wmKeyDown(Widget.java:1840)
+	at org.eclipse.swt.widgets.Control.WM_KEYDOWN(Control.java:5153)
+	at org.eclipse.swt.widgets.Canvas.WM_KEYDOWN(Canvas.java:406)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4776)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5039)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3657)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:342)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:648)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:342)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:555)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:651)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:588)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1459)
+Caused by: org.eclipse.e4.core.di.InjectionException: java.lang.NullPointerException: Cannot invoke "org.eclipse.ui.IWorkbenchWindow.getActivePage()" because "this.fWindow" is null
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:68)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:298)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:232)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:174)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceHandler.execute(HandlerServiceHandler.java:165)
+	... 81 more
+Caused by: java.lang.NullPointerException: Cannot invoke "org.eclipse.ui.IWorkbenchWindow.getActivePage()" because "this.fWindow" is null
+	at org.eclipse.cdt.make.ui.actions.AbstractTargetAction.selectionChanged(AbstractTargetAction.java:105)
+	at org.eclipse.cdt.make.ui.actions.BuildLastTargetHandler.execute(BuildLastTargetHandler.java:39)
+	at org.eclipse.ui.internal.handlers.HandlerProxy.execute(HandlerProxy.java:283)
+	at org.eclipse.ui.internal.handlers.E4HandlerProxy.execute(E4HandlerProxy.java:99)
+	at jdk.internal.reflect.GeneratedMethodAccessor105.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	... 85 more
+
+!ENTRY com.crt.log 1 0 2026-05-10 20:13:33.953
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2026-05-10 20:13:34.972
+!MESSAGE RedlinkServer telnet session connected on port 3025->58787 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-05-10 20:13:37.402
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_25.6.131/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=58788, -g, -mi, -2, -pMCXN947, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/Msi/Desktop/workspace/frdm-mcxn947-http-client-example-main/frdmmcxn947_lwip_httpsrv_bm_cm33_core0/Debug, --flash-dir, C:/nxp/LinkServer_25.6.131/binaries/Flash, --flash-dir, C:/Users/Msi/Desktop/workspace/frdm-mcxn947-http-client-example-main/.mcuxpressoide_packages_support/MCXN947_support/Flash, --telnet, 3330, --romstalldelay, 600 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2026-05-10 20:13:40.130
+!MESSAGE Telnet session connected on port 3330->58801 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-05-10 20:14:53.896
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2026-05-10 20:14:54.913
+!MESSAGE RedlinkServer telnet session connected on port 3025->58804 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-05-10 20:14:57.324
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_25.6.131/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=58805, -g, -mi, -2, -pMCXN947, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/Msi/Desktop/workspace/frdm-mcxn947-http-client-example-main/frdmmcxn947_lwip_httpsrv_bm_cm33_core0/Debug, --flash-dir, C:/nxp/LinkServer_25.6.131/binaries/Flash, --flash-dir, C:/Users/Msi/Desktop/workspace/frdm-mcxn947-http-client-example-main/.mcuxpressoide_packages_support/MCXN947_support/Flash, --telnet, 3330, --romstalldelay, 600 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2026-05-10 20:14:59.991
+!MESSAGE Telnet session connected on port 3330->58819 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-05-10 20:19:11.075
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2026-05-10 20:19:12.082
+!MESSAGE RedlinkServer telnet session connected on port 3025->60051 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-05-10 20:19:14.633
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_25.6.131/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=60052, -g, -mi, -2, -pMCXN947, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/Msi/Desktop/workspace/frdm-mcxn947-http-client-example-main/frdmmcxn947_lwip_httpsrv_bm_cm33_core0/Debug, --flash-dir, C:/nxp/LinkServer_25.6.131/binaries/Flash, --flash-dir, C:/Users/Msi/Desktop/workspace/frdm-mcxn947-http-client-example-main/.mcuxpressoide_packages_support/MCXN947_support/Flash, --telnet, 3330, --romstalldelay, 600 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2026-05-10 20:19:17.353
+!MESSAGE Telnet session connected on port 3330->60065 @ 127.0.0.1
+
+!ENTRY org.eclipse.debug.core 4 125 2026-05-10 21:20:42.399
+!MESSAGE Error logged from Debug Core: 
+!STACK 1
+org.eclipse.debug.core.DebugException: Terminate failed
+	at org.eclipse.debug.core.Launch.terminate(Launch.java:296)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunch.terminate(GdbLaunch.java:313)
+	at org.eclipse.debug.internal.core.LaunchManager.shutdown(LaunchManager.java:2209)
+	at org.eclipse.debug.core.DebugPlugin.stop(DebugPlugin.java:712)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:875)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:867)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:1046)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:376)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:660)
+	at org.eclipse.osgi.container.Module.stop(Module.java:521)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1893)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1768)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:275)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:208)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:660)
+	at org.eclipse.osgi.container.Module.stop(Module.java:521)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:207)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:226)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+!SUBENTRY 1 org.eclipse.debug.core 4 5010 2026-05-10 21:20:42.400
+!MESSAGE Terminate failed
+
+!ENTRY org.eclipse.core.jobs 4 2 2026-05-10 21:20:42.435
+!MESSAGE An internal error occurred during: "Execute Debug Command".
+!STACK 0
+org.eclipse.core.runtime.AssertionFailedException: assertion failed: The application has not been initialized.
+	at org.eclipse.core.runtime.Assert.isTrue(Assert.java:119)
+	at org.eclipse.core.internal.runtime.InternalPlatform.assertInitialized(InternalPlatform.java:183)
+	at org.eclipse.core.internal.runtime.InternalPlatform.getAdapterManager(InternalPlatform.java:204)
+	at org.eclipse.core.runtime.Platform.getAdapterManager(Platform.java:662)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunch.getAdapter(GdbLaunch.java:454)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunch.disconnect(GdbLaunch.java:338)
+	at org.eclipse.debug.internal.core.commands.DisconnectCommand.execute(DisconnectCommand.java:35)
+	at org.eclipse.debug.internal.core.commands.ForEachCommand.doExecute(ForEachCommand.java:36)
+	at org.eclipse.debug.core.commands.AbstractDebugCommand$1.run(AbstractDebugCommand.java:215)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.jobs 2 2 2026-05-10 21:20:42.741
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.cdt.dsf.gdb.internal.ui.console.GdbBasicCliConsole$InputReadJob
+!SESSION 2026-05-10 21:22:07.535 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=17.0.9
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.egit.ui 2 0 2026-05-10 21:22:39.272
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Msi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY com.crt.log 1 0 2026-05-10 21:23:26.614
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2026-05-10 21:23:27.632
+!MESSAGE RedlinkServer telnet session connected on port 3025->55306 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-05-10 21:23:31.187
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_25.6.131/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=55307, -g, -mi, -2, -pMCXN947, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/Msi/Desktop/workspace/frdm-mcxn947-http-client-example-main/frdmmcxn947_lwip_httpsrv_bm_cm33_core0/Debug, --flash-dir, C:/nxp/LinkServer_25.6.131/binaries/Flash, --flash-dir, C:/Users/Msi/Desktop/workspace/frdm-mcxn947-http-client-example-main/.mcuxpressoide_packages_support/MCXN947_support/Flash, --telnet, 3330, --romstalldelay, 600 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2026-05-10 21:23:33.926
+!MESSAGE Telnet session connected on port 3330->55320 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-05-10 21:33:56.174
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2026-05-10 21:33:57.179
+!MESSAGE RedlinkServer telnet session connected on port 3025->60059 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-05-10 21:33:59.836
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_25.6.131/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=60060, -g, -mi, -2, -pMCXN947, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/Msi/Desktop/workspace/frdm-mcxn947-http-client-example-main/frdmmcxn947_lwip_httpsrv_bm_cm33_core0/Debug, --flash-dir, C:/nxp/LinkServer_25.6.131/binaries/Flash, --flash-dir, C:/Users/Msi/Desktop/workspace/frdm-mcxn947-http-client-example-main/.mcuxpressoide_packages_support/MCXN947_support/Flash, --telnet, 3330, --romstalldelay, 600 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2026-05-10 21:34:02.536
+!MESSAGE Telnet session connected on port 3330->60073 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 4 2026-05-10 21:38:51.783
+!MESSAGE NullPointerException while trying to calculated source lookup path. This can be ignored if it occurs while terminating a debug session. See Bug 500988.
+!STACK 0
+java.lang.NullPointerException: Cannot read the array length because "containers" is null
+	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupDirector.collectSubstitutionsPaths(GdbSourceLookupDirector.java:102)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupDirector.collectSubstitutionsPaths(GdbSourceLookupDirector.java:146)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupDirector.getSubstitutionsPaths(GdbSourceLookupDirector.java:72)
+	at org.eclipse.cdt.dsf.gdb.service.GDBSourceLookup.getSubstitutionsPaths(GDBSourceLookup.java:124)
+	at org.eclipse.cdt.dsf.gdb.service.GDBSourceLookup.sourceContainersChanged(GDBSourceLookup.java:139)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupParticipant.sourceContainersChangedOnDispatchThread(GdbSourceLookupParticipant.java:120)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupParticipant$1.run(GdbSourceLookupParticipant.java:85)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+
+!ENTRY com.nxp.mcuxpresso.core.debug 4 0 2026-05-10 21:38:51.792
+!MESSAGE There is already a running debug session for the launch configuration 'frdmmcxn947_lwip_httpsrv_bm_cm33_core0 LinkServer Debug'.
+
+!ENTRY com.crt.log 1 0 2026-05-10 21:39:07.705
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2026-05-10 21:39:08.711
+!MESSAGE RedlinkServer telnet session connected on port 3025->64024 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-05-10 21:39:11.081
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_25.6.131/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=64025, -g, -mi, -2, -pMCXN947, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/Msi/Desktop/workspace/frdm-mcxn947-http-client-example-main/frdmmcxn947_lwip_httpsrv_bm_cm33_core0/Debug, --flash-dir, C:/nxp/LinkServer_25.6.131/binaries/Flash, --flash-dir, C:/Users/Msi/Desktop/workspace/frdm-mcxn947-http-client-example-main/.mcuxpressoide_packages_support/MCXN947_support/Flash, --telnet, 3330, --romstalldelay, 600 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2026-05-10 21:39:13.829
+!MESSAGE Telnet session connected on port 3330->64038 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-05-10 21:40:49.466
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2026-05-10 21:40:50.481
+!MESSAGE RedlinkServer telnet session connected on port 3025->55020 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-05-10 21:40:52.881
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_25.6.131/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=55021, -g, -mi, -2, -pMCXN947, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/Msi/Desktop/workspace/frdm-mcxn947-http-client-example-main/frdmmcxn947_lwip_httpsrv_bm_cm33_core0/Debug, --flash-dir, C:/nxp/LinkServer_25.6.131/binaries/Flash, --flash-dir, C:/Users/Msi/Desktop/workspace/frdm-mcxn947-http-client-example-main/.mcuxpressoide_packages_support/MCXN947_support/Flash, --telnet, 3330, --romstalldelay, 600 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2026-05-10 21:40:55.366
+!MESSAGE Telnet session connected on port 3330->55033 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 4 2026-05-10 21:43:44.877
+!MESSAGE NullPointerException while trying to calculated source lookup path. This can be ignored if it occurs while terminating a debug session. See Bug 500988.
+!STACK 0
+java.lang.NullPointerException: Cannot read the array length because "containers" is null
+	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupDirector.collectSubstitutionsPaths(GdbSourceLookupDirector.java:102)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupDirector.collectSubstitutionsPaths(GdbSourceLookupDirector.java:146)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupDirector.getSubstitutionsPaths(GdbSourceLookupDirector.java:72)
+	at org.eclipse.cdt.dsf.gdb.service.GDBSourceLookup.getSubstitutionsPaths(GDBSourceLookup.java:124)
+	at org.eclipse.cdt.dsf.gdb.service.GDBSourceLookup.sourceContainersChanged(GDBSourceLookup.java:139)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupParticipant.sourceContainersChangedOnDispatchThread(GdbSourceLookupParticipant.java:120)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupParticipant$1.run(GdbSourceLookupParticipant.java:85)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+
+!ENTRY com.nxp.mcuxpresso.core.debug 4 0 2026-05-10 21:43:44.882
+!MESSAGE There is already a running debug session for the launch configuration 'frdmmcxn947_lwip_httpsrv_bm_cm33_core0 LinkServer Debug'.
+
+!ENTRY com.crt.log 1 0 2026-05-10 21:43:54.509
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2026-05-10 21:43:55.525
+!MESSAGE RedlinkServer telnet session connected on port 3025->53506 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-05-10 21:43:57.788
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_25.6.131/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=53508, -g, -mi, -2, -pMCXN947, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/Msi/Desktop/workspace/frdm-mcxn947-http-client-example-main/frdmmcxn947_lwip_httpsrv_bm_cm33_core0/Debug, --flash-dir, C:/nxp/LinkServer_25.6.131/binaries/Flash, --flash-dir, C:/Users/Msi/Desktop/workspace/frdm-mcxn947-http-client-example-main/.mcuxpressoide_packages_support/MCXN947_support/Flash, --telnet, 3330, --romstalldelay, 600 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2026-05-10 21:44:00.526
+!MESSAGE Telnet session connected on port 3330->53521 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug 4 0 2026-05-10 21:49:11.422
+!MESSAGE There is already a running debug session for the launch configuration 'frdmmcxn947_lwip_httpsrv_bm_cm33_core0 LinkServer Debug'.
+
+!ENTRY com.crt.log 1 0 2026-05-10 21:49:45.205
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2026-05-10 21:49:46.211
+!MESSAGE RedlinkServer telnet session connected on port 3025->53950 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-05-10 21:49:48.536
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_25.6.131/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=53951, -g, -mi, -2, -pMCXN947, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/Msi/Desktop/workspace/frdm-mcxn947-http-client-example-main/frdmmcxn947_lwip_httpsrv_bm_cm33_core0/Debug, --flash-dir, C:/nxp/LinkServer_25.6.131/binaries/Flash, --flash-dir, C:/Users/Msi/Desktop/workspace/frdm-mcxn947-http-client-example-main/.mcuxpressoide_packages_support/MCXN947_support/Flash, --telnet, 3330, --romstalldelay, 600 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2026-05-10 21:49:51.224
+!MESSAGE Telnet session connected on port 3330->53964 @ 127.0.0.1
+
+!ENTRY org.eclipse.tm.terminal.connector.cdtserial 4 0 2026-05-10 21:50:00.708
+!MESSAGE Error opening \\.\COM6 (5)
+!STACK 0
+java.io.IOException: Error opening \\.\COM6 (5)
+	at org.eclipse.cdt.serial.SerialPort.open0(Native Method)
+	at org.eclipse.cdt.serial.SerialPort.open(SerialPort.java:316)
+	at org.eclipse.tm.terminal.connector.cdtserial.connector.SerialConnector.connect(SerialConnector.java:80)
+	at org.eclipse.tm.internal.terminal.connector.TerminalConnector.connect(TerminalConnector.java:182)
+	at org.eclipse.tm.internal.terminal.emulator.VT100TerminalControl.connectTerminal(VT100TerminalControl.java:435)
+	at org.eclipse.tm.terminal.view.ui.tabs.TabFolderManager.createTabItem(TabFolderManager.java:330)
+	at org.eclipse.tm.terminal.view.ui.manager.ConsoleManager.openConsole(ConsoleManager.java:489)
+	at org.eclipse.tm.terminal.view.ui.services.TerminalService$2.doRun(TerminalService.java:304)
+	at org.eclipse.tm.terminal.view.ui.services.TerminalService$2.lambda$0(TerminalService.java:274)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4046)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3662)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:342)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:648)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:342)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:555)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:651)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:588)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1459)
+
+!ENTRY org.eclipse.tm.terminal.connector.cdtserial 4 0 2026-05-10 21:50:14.932
+!MESSAGE Error opening \\.\COM6 (5)
+!STACK 0
+java.io.IOException: Error opening \\.\COM6 (5)
+	at org.eclipse.cdt.serial.SerialPort.open0(Native Method)
+	at org.eclipse.cdt.serial.SerialPort.open(SerialPort.java:316)
+	at org.eclipse.tm.terminal.connector.cdtserial.connector.SerialConnector.connect(SerialConnector.java:80)
+	at org.eclipse.tm.internal.terminal.connector.TerminalConnector.connect(TerminalConnector.java:182)
+	at org.eclipse.tm.internal.terminal.emulator.VT100TerminalControl.connectTerminal(VT100TerminalControl.java:435)
+	at org.eclipse.tm.terminal.view.ui.tabs.TabFolderManager.createTabItem(TabFolderManager.java:330)
+	at org.eclipse.tm.terminal.view.ui.manager.ConsoleManager.openConsole(ConsoleManager.java:489)
+	at org.eclipse.tm.terminal.view.ui.services.TerminalService$2.doRun(TerminalService.java:304)
+	at org.eclipse.tm.terminal.view.ui.services.TerminalService$2.lambda$0(TerminalService.java:274)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4046)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3662)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:342)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:648)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:342)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:555)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:651)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:588)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1459)
+
+!ENTRY com.crt.log 1 0 2026-05-10 21:53:00.692
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2026-05-10 21:53:01.704
+!MESSAGE RedlinkServer telnet session connected on port 3025->64211 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-05-10 21:53:06.871
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_25.6.131/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=64213, -g, -mi, -2, -pMCXN947, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/Msi/Desktop/workspace/frdm-mcxn947-http-client-example-main/frdmmcxn947_lwip_httpsrv_bm_cm33_core0/Debug, --flash-dir, C:/nxp/LinkServer_25.6.131/binaries/Flash, --flash-dir, C:/Users/Msi/Desktop/workspace/frdm-mcxn947-http-client-example-main/.mcuxpressoide_packages_support/MCXN947_support/Flash, --telnet, 3330, --romstalldelay, 600 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2026-05-10 21:53:09.561
+!MESSAGE Telnet session connected on port 3330->64226 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug 4 0 2026-05-10 21:56:46.737
+!MESSAGE There is already a running debug session for the launch configuration 'frdmmcxn947_lwip_httpsrv_bm_cm33_core0 LinkServer Debug'.
+
+!ENTRY com.crt.log 1 0 2026-05-10 21:57:09.149
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2026-05-10 21:57:10.170
+!MESSAGE RedlinkServer telnet session connected on port 3025->57076 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-05-10 21:57:15.124
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_25.6.131/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=65418, -g, -mi, -2, -pMCXN947, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/Msi/Desktop/workspace/frdm-mcxn947-http-client-example-main/frdmmcxn947_lwip_httpsrv_bm_cm33_core0/Debug, --flash-dir, C:/nxp/LinkServer_25.6.131/binaries/Flash, --flash-dir, C:/Users/Msi/Desktop/workspace/frdm-mcxn947-http-client-example-main/.mcuxpressoide_packages_support/MCXN947_support/Flash, --telnet, 3330, --romstalldelay, 600 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2026-05-10 21:57:17.796
+!MESSAGE Telnet session connected on port 3330->65431 @ 127.0.0.1
+
+!ENTRY org.eclipse.tm.terminal.connector.cdtserial 4 0 2026-05-10 21:57:35.467
+!MESSAGE Error opening \\.\COM6 (5)
+!STACK 0
+java.io.IOException: Error opening \\.\COM6 (5)
+	at org.eclipse.cdt.serial.SerialPort.open0(Native Method)
+	at org.eclipse.cdt.serial.SerialPort.open(SerialPort.java:316)
+	at org.eclipse.tm.terminal.connector.cdtserial.connector.SerialConnector.connect(SerialConnector.java:80)
+	at org.eclipse.tm.internal.terminal.connector.TerminalConnector.connect(TerminalConnector.java:182)
+	at org.eclipse.tm.internal.terminal.emulator.VT100TerminalControl.connectTerminal(VT100TerminalControl.java:435)
+	at org.eclipse.tm.terminal.view.ui.tabs.TabFolderManager.createTabItem(TabFolderManager.java:330)
+	at org.eclipse.tm.terminal.view.ui.manager.ConsoleManager.openConsole(ConsoleManager.java:489)
+	at org.eclipse.tm.terminal.view.ui.services.TerminalService$2.doRun(TerminalService.java:304)
+	at org.eclipse.tm.terminal.view.ui.services.TerminalService$2.lambda$0(TerminalService.java:274)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4046)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3662)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:342)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:648)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:342)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:555)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:651)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:588)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1459)
+
+!ENTRY com.nxp.mcuxpresso.core.debug 4 0 2026-05-10 22:00:21.736
+!MESSAGE There is already a running debug session for the launch configuration 'frdmmcxn947_lwip_httpsrv_bm_cm33_core0 LinkServer Debug'.
+
+!ENTRY com.crt.log 1 0 2026-05-10 22:00:39.077
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2026-05-10 22:00:40.094
+!MESSAGE RedlinkServer telnet session connected on port 3025->62032 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-05-10 22:00:42.588
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_25.6.131/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=62033, -g, -mi, -2, -pMCXN947, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/Msi/Desktop/workspace/frdm-mcxn947-http-client-example-main/frdmmcxn947_lwip_httpsrv_bm_cm33_core0/Debug, --flash-dir, C:/nxp/LinkServer_25.6.131/binaries/Flash, --flash-dir, C:/Users/Msi/Desktop/workspace/frdm-mcxn947-http-client-example-main/.mcuxpressoide_packages_support/MCXN947_support/Flash, --telnet, 3330, --romstalldelay, 600 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2026-05-10 22:00:45.265
+!MESSAGE Telnet session connected on port 3330->62046 @ 127.0.0.1

@@ -1,0 +1,10 @@
+C:\Users\Msi\Desktop\Facultate\Barglazan\irigation-system\obj\Debug\net9.0\irrigation.csproj.AssemblyReference.cache
+C:\Users\Msi\Desktop\Facultate\Barglazan\irigation-system\obj\Debug\net9.0\rpswa.dswa.cache.json
+C:\Users\Msi\Desktop\Facultate\Barglazan\irigation-system\obj\Debug\net9.0\irrigation.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Msi\Desktop\Facultate\Barglazan\irigation-system\obj\Debug\net9.0\irrigation.AssemblyInfoInputs.cache
+C:\Users\Msi\Desktop\Facultate\Barglazan\irigation-system\obj\Debug\net9.0\irrigation.AssemblyInfo.cs
+C:\Users\Msi\Desktop\Facultate\Barglazan\irigation-system\obj\Debug\net9.0\irrigation.csproj.CoreCompileInputs.cache
+C:\Users\Msi\Desktop\Facultate\Barglazan\irigation-system\obj\Debug\net9.0\irrigation.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Msi\Desktop\Facultate\Barglazan\irigation-system\obj\Debug\net9.0\irrigation.RazorAssemblyInfo.cache
+C:\Users\Msi\Desktop\Facultate\Barglazan\irigation-system\obj\Debug\net9.0\irrigation.RazorAssemblyInfo.cs
+C:\Users\Msi\Desktop\Facultate\Barglazan\irigation-system\obj\Debug\net9.0\irrigation.sourcelink.json
